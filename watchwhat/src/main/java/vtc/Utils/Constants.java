@@ -26,9 +26,14 @@ public class Constants {
     public static String username = "  [-] Username: ";
     public static String password = "  [-] Password: ";
     public static String fullname = "  [-] Fullname: ";
-    public static String email = "Email: ";
-    public static String birthdate = "Your birthday (YYYY-MM-dd): ";
-
+    public static String email = " [-] Email: ";
+    public static String birthdate = " [-] Your birthday (YYYY-MM-dd): ";
+    //Search Movie
+    public static String mov_name = " [+] Movie's name: ";
+    public static String mov_select = " [+] Input ID movie to choice: ";
+    public static String noname = " [x] Movie not found ";
+    //Movie info temp
+    public static int idmov_temp;
     // Error
     public static String checkEmpty = "Input is empty! Try again";
     public static String username_exist = "Username exist, please try again!";

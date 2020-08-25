@@ -130,27 +130,6 @@ public class UserBL {
     }
 
     // PROFILE
-    public static void view_profile() {
-        Process.clrscr();
-        System.out.println(Constants.Decorate3);
-        System.out.println("| My aliases, yeah I am only one             | " + Constants.id_temp);
-        System.out.println("| My name is                                 | " + Constants.name_temp);
-        System.out.println("| Account to log into the system             | " + Constants.user_temp);
-        System.out.println("| Password to log into the system            | hmm...");
-        System.out.println("| Electronic Mail, oh is Email               | " + Constants.email_temp);
-        System.out.println("| The first day you cried                    | " + Constants.bd_temp);
-        System.out.print("| Big hand hah                               | ");
-        if (Constants.lvl_temp == 1) {
-            System.out.println("Hehe, just is member no more o(*￣▽￣*)o");
-        } else {
-            System.out.println("Yep, I'm BOSS ( •̀ ω •́ )✧");
-        }
-        System.out.println("| Join into the system from                  | " + Constants.since_temp);
-        System.out.println(Constants.Decorate3);
-        System.out.print(Constants.Continue);
-        sc.nextLine();
-    }
-
     public static void update_profile() throws SQLException {
         Process.clrscr();
         System.out.print("  [!] New name                    : ");

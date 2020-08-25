@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.Scanner;
 
+import vtc.BL.MovieBL;
 import vtc.BL.UserBL;
 
 public class UILayer {
@@ -80,7 +81,6 @@ public class UILayer {
         headerLongUI();
         out.println("| Login into application by member's account |");
         out.println(Constants.Decorate2);
-        // UserDAL.login_member();
         UserBL.login_into();
     }
 
@@ -118,7 +118,7 @@ public class UILayer {
                     favourite_main();
                     break;
                 case "4":
-                    System.out.println("Search ^^");
+                    movieUI();
                     break;
                 case "5":
                     if (Constants.lvl_temp == 1) {
@@ -240,6 +240,7 @@ public class UILayer {
         out.print(Constants.Continue);
         sc.nextLine();
     }
+
     public static void profileUI() throws SQLException {
         boolean is_continue = true;
         while (is_continue) {
@@ -253,7 +254,7 @@ public class UILayer {
             String choice = sc.nextLine();
             switch (choice) {
                 case "1":
-                    UserBL.view_profile();
+                    view_profile();
                     break;
                 case "2":
                     UserBL.update_profile();
@@ -266,6 +267,59 @@ public class UILayer {
                     break;
             }
         }
+    }
+
+    public static void movieUI() {
+        boolean is_continue = true;
+        while (is_continue) {
+            headerLongUI();
+            login_success();
+            out.println("| [1] Search movie by name                   |");
+            out.println("| [2] Search movie by nation                 |");
+            out.println("| [3] Search movie by tag                    |");
+            out.println("| [0] Back                                   |");
+            out.println(Constants.Decorate2);
+            out.print(" Please choose one of options above: ");
+            String choice = sc.nextLine();
+            switch (choice) {
+                case "1":
+                    MovieBL.searchMovieBL();
+                    break;
+                case "2":
+                    System.out.println("Name");
+                    break;
+                case "3":
+                    System.out.println("Name");
+                    break;
+                case "0":
+                    is_continue = false;
+                    break;
+                default:
+                    out.println(Constants.Wrongchoice);
+                    break;
+            }
+        }
+    }
+
+    public static void view_profile() {
+        Process.clrscr();
+        System.out.println(Constants.Decorate3);
+        System.out.println("| My aliases, yeah I am only one             | " + Constants.id_temp);
+        System.out.println("| My name is                                 | " + Constants.name_temp);
+        System.out.println("| Account to log into the system             | " + Constants.user_temp);
+        System.out.println("| Password to log into the system            | hmm...");
+        System.out.println("| Electronic Mail, oh is Email               | " + Constants.email_temp);
+        System.out.println("| The first day you cried                    | " + Constants.bd_temp);
+        System.out.print("| Big hand hah                               | ");
+        if (Constants.lvl_temp == 1) {
+            System.out.println("Hehe, just is member no more o(*￣▽￣*)o");
+        } else {
+            System.out.println("Yep, I'm BOSS ( •̀ ω •́ )✧");
+        }
+        System.out.println("| Join into the system from                  | " + Constants.since_temp);
+        System.out.println(Constants.Decorate3);
+        System.out.print(Constants.Continue);
+        sc.nextLine();
     }
 
     public static void aboutme() throws SQLException {
