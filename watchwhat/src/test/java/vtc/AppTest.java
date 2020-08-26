@@ -2,7 +2,6 @@ package vtc;
 
 import java.sql.Date;
 
-import vtc.BL.UserBL;
 import vtc.DAL.UserDAL;
 
 /**

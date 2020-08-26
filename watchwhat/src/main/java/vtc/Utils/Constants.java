@@ -4,6 +4,7 @@ import java.sql.Date;
 
 public class Constants {
     public static String Decorate = "+--------------------------------------+";
+    public static String Decorate1 = "----------------------------------------";
     public static String Decorate2 = "+--------------------------------------------+";
     public static String Decorate3 = "+--------------------------------------------+--------------------------------------------+";
     public static String Decorate4 = "+------------+---------------------------------------------+------------------------------+----------+------------------------------------------------------------------------+";
@@ -71,4 +72,6 @@ public class Constants {
     public static String aboutme4 = "| Intructor: Vu Tran Lam                     |";
     public static String aboutme5 = "| Code by Java, 2020                         |";
     public static String notepatch;
+
+    public static String sendRequstUser = "Submit request successfully!!!";
 }

@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import vtc.BL.MovieBL;
+import vtc.BL.RequestBL;
 import vtc.BL.SourcesBL;
 import vtc.BL.UserBL;
 import vtc.Persistance.Movie;
@@ -126,10 +127,10 @@ public class UILayer {
                     break;
                 case "5":
                     if (Constants.lvl_temp == 1) {
-                        System.out.println("Request for member");
+                        RequestBL.ViewReqUser();
                     }
                     if (Constants.lvl_temp > 1) {
-                        System.out.println("Request for admin");
+                        RequestBL.ViewAdmin();
                     }
                     break;
                 case "6":
