@@ -4,10 +4,14 @@ import static java.lang.System.out;
 
 import java.sql.SQLException;
 import java.text.ParseException;
+import java.util.List;
 import java.util.Scanner;
 
 import vtc.BL.MovieBL;
+import vtc.BL.SourcesBL;
 import vtc.BL.UserBL;
+import vtc.Persistance.Movie;
+import vtc.Persistance.Sources;
 
 public class UILayer {
     static Scanner sc = new Scanner(System.in);
@@ -92,16 +96,16 @@ public class UILayer {
             out.println("| [1] Profile                                |");
             out.println("| [2] Change password                        |");
             out.println("| [3] Favourite List                         |");
-            out.println("| [4] Search and View movie                  |");
             if (Constants.lvl_temp == 1) {
+                out.println("| [4] Search and View movie                  |");
                 out.println("| [5] Request                                |");
             }
 
             if (Constants.lvl_temp > 1) {
+                out.println("| [4] Search, View and Update movie          |");
                 out.println("| ------- Control Panel for Admin ---------- |");
                 out.println("| [5] Manage request                         |");
                 out.println("| [6] Manage members                         |");
-                out.println("| [7] Manage movies                          |");
             }
             out.println("| [0] Logout                                 |");
             out.println(Constants.Decorate2);
@@ -134,14 +138,6 @@ public class UILayer {
                     }
                     if (Constants.lvl_temp > 1) {
                         System.out.println("M-mem");
-                    }
-                    break;
-                case "7":
-                    if (Constants.lvl_temp == 1) {
-                        out.println(Constants.Wrongchoice);
-                    }
-                    if (Constants.lvl_temp > 1) {
-                        System.out.println("M-movie");
                     }
                     break;
                 case "0":
@@ -269,27 +265,23 @@ public class UILayer {
         }
     }
 
-    public static void movieUI() {
+    public static void movieUI() throws SQLException {
         boolean is_continue = true;
         while (is_continue) {
             headerLongUI();
             login_success();
             out.println("| [1] Search movie by name                   |");
             out.println("| [2] Search movie by nation                 |");
-            out.println("| [3] Search movie by tag                    |");
             out.println("| [0] Back                                   |");
             out.println(Constants.Decorate2);
             out.print(" Please choose one of options above: ");
             String choice = sc.nextLine();
             switch (choice) {
                 case "1":
-                    MovieBL.searchMovieBL();
+                    MovieBL.searchMovieName();
                     break;
                 case "2":
-                    System.out.println("Name");
-                    break;
-                case "3":
-                    System.out.println("Name");
+                    MovieBL.searchMovieNation();
                     break;
                 case "0":
                     is_continue = false;
@@ -298,6 +290,53 @@ public class UILayer {
                     out.println(Constants.Wrongchoice);
                     break;
             }
+        }
+    }
+
+    public static void show_mov_info(Movie mov) {
+        String a = "" + mov.getMovieID();
+        String b = mov.getMovieNAME();
+        String c = mov.getMovieDIC();
+        String d = "" + mov.getMovieYEAR();
+        String e = mov.getmovieCOVER();
+        System.out.printf("[ %-10s | %-43s | %-28s | %-8s | %-70s ]\n", a,b,c,d,e);
+        System.out.println(Constants.Decorate4);
+    }
+    public static void show_mov_info2(List<Movie> lst) throws SQLException {
+        int n = 0;
+        System.out.println(Constants.Decorate4);
+        System.out.println(Constants.headmov1);
+        System.out.println(Constants.Decorate4);
+        for (Movie mov : lst) {
+            UILayer.show_mov_info(mov);
+            n++;
+        }
+        if (n > 0) {
+            System.out.println(Constants.numbermov + n);
+            System.out.print(Constants.mov_select);
+            int select = sc.nextInt();
+            sc.nextLine();
+            List<Sources> lst2 = new SourcesBL().getLinkMovies(select);
+            for (Sources sources : lst2) {
+                System.out.println(sources);
+            }
+            if (lst2.size()==0) {
+                System.out.println(Constants.noepisode);
+            }
+            if (Constants.lvl_temp>1) {
+                //update film
+                System.out.print(Constants.update_mov);
+                String ys = sc.nextLine();
+                MovieBL.update_mov_info(ys,select);
+            }
+            System.out.print(Constants.Continue);
+            sc.nextLine();
+        }
+        if (n == 0) {
+            System.out.println(Constants.noname);
+            System.out.println(Constants.Decorate4);
+            System.out.print(Constants.Continue);
+            sc.nextLine();
         }
     }
 

@@ -6,9 +6,10 @@ public class Constants {
     public static String Decorate = "+--------------------------------------+";
     public static String Decorate2 = "+--------------------------------------------+";
     public static String Decorate3 = "+--------------------------------------------+--------------------------------------------+";
+    public static String Decorate4 = "+------------+---------------------------------------------+------------------------------+----------+------------------------------------------------------------------------+";
     public static String InputTo = "=> ";
     public static String Wrongchoice = "Please choice again!";
-    public static String Continue = "Press any key for continue... ";
+    public static String Continue = " Press any key for continue... ";
     public static String ExitApp = "Thank you for used application!";
     public static String RegisterSuccess = "Register new Account is success!";
     public static String RegisterFailed = "Register new Account is failed!";
@@ -16,6 +17,8 @@ public class Constants {
     public static String ChangePassFailed = "\n (っ °Д °;)っ Change password failed!";
     public static String ProfileSuccess = "\n  (～￣▽￣)～ New profile has change!";
     public static String ProfileFailed = "\n Change profile failed! o(TヘTo)";
+    public static String movieSuccess = "\n  (～￣▽￣)～ New info has change!";
+    public static String movieFailed = "\n Change info failed! o(TヘTo)";
     public static String LoginSuccess = "Login success! Welcome, ";
     public static String LoginFailed = "Wrong username or password!";
     public static String Again = "Do you want try again? (Y/N)...";
@@ -26,13 +29,19 @@ public class Constants {
     public static String username = "  [-] Username: ";
     public static String password = "  [-] Password: ";
     public static String fullname = "  [-] Fullname: ";
-    public static String email = " [-] Email: ";
-    public static String birthdate = " [-] Your birthday (YYYY-MM-dd): ";
-    //Search Movie
+    public static String email = "  [-] Email: ";
+    public static String birthdate = "  [-] Your birthday (YYYY-MM-dd): ";
+    // Search Movie
     public static String mov_name = " [+] Movie's name: ";
-    public static String mov_select = " [+] Input ID movie to choice: ";
+    public static String mov_nation = " [+] ID Nation: ";
+    public static String mov_select = " [+] Input ID movie to get link: ";
+    public static String numbermov = " [!] Movie had found: ";
     public static String noname = " [x] Movie not found ";
-    //Movie info temp
+    public static String noepisode = " [x] Movie's episode not have ";
+    public static String headmov1 = "[   - ID -   |              - Movie's Name -               |         - Director -         | - Year - |                       - Image Cover -                                  ]";
+    // update film
+    public static String update_mov = " [V] Do you want movie's infomation update (Y/N): ";
+    // Movie info temp
     public static int idmov_temp;
     // Error
     public static String checkEmpty = "Input is empty! Try again";
