@@ -22,6 +22,24 @@ public class Process {
         }
     }
 
+    public int check_number_empty() {
+        int input = 0;
+        boolean a = true;
+        while (a) {
+            try {
+                input = sc.nextInt();
+                if (input < 1) {
+                    System.out.println(Constants.checkNumberEmpty);
+                } else {
+                    a = false;
+                }
+            } catch (Exception e) {
+                System.out.println(Constants.checkNumberEmpty);
+                sc.nextLine();
+            }
+        }
+        return input;
+    }
     public Date check_Date() {
         Date birthdate = null;
         while (true) {

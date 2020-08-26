@@ -46,6 +46,7 @@ public class Constants {
     public static int idmov_temp;
     // Error
     public static String checkEmpty = "Input is empty! Try again";
+    public static String checkNumberEmpty = "Try again! Input is Integer number > 0";
     public static String username_exist = "Username exist, please try again!";
     public static String wrongdate = "Date is wrong, try again...";
     public static String wrongpass = "Password wrong, try again...";
