@@ -13,6 +13,7 @@ public class App {
             // welcome UI
             Aboutme.autogetAbout();
             UILayer.welcome();
+            //test git
         } catch (Exception e) {
             System.out.println("Connection Error!");
             e.printStackTrace();
