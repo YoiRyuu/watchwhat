@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import vtc.Utils.Constants;
+import vtc.Utils.UILayer;
 import vtc.Persistance.User;
 
 public class UserDAL {
@@ -94,5 +95,29 @@ public class UserDAL {
         } catch (Exception e) {
             System.out.println(Constants.ProfileFailed);
         }
+    }
+
+    public static void get_byname(String name) throws SQLException {
+        String sql = "{CALL searchmember_byname(?)}";
+        CallableStatement call = DbUtil.getConnection().prepareCall(sql);
+        call.setString(1, name);
+        UILayer.show_mem_byname(call);
+    }
+
+    public static void update_byid(int id, String name, String email, Date bd, int stt, int lvl) throws SQLException {
+        String sql = "{CALL updatemember_id(?,?,?,?,?,?)}";
+        try (CallableStatement call = DbUtil.getConnection().prepareCall(sql);) {
+            call.setInt(1, id);
+            call.setString(2, name);
+            call.setString(3, email);
+            call.setDate(4, bd);
+            call.setInt(5, stt);
+            call.setInt(6, lvl);
+            call.execute();
+            System.out.println(Constants.ProfileSuccess);
+        } catch (Exception e) {
+            System.out.println(Constants.ProfileFailed);
+        }
+
     }
 }

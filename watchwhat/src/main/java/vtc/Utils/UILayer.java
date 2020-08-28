@@ -2,6 +2,8 @@ package vtc.Utils;
 
 import static java.lang.System.out;
 
+import java.sql.CallableStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.List;
@@ -19,27 +21,28 @@ public class UILayer {
 
     public static void headerUI() {
         Process.clrscr();
-        out.println(Constants.Decorate);
+        out.println(Constants.Decorate2);
         out.println(Constants.Welcome1);
         out.println(Constants.Welcome2);
-        out.println("|          [ Version " + Constants.ver + " ]           |");
-        out.println(Constants.Decorate);
+        out.println(Constants.showver);
+        out.println(Constants.Decorate2);
     }
 
     public static void headerLongUI() {
         Process.clrscr();
         out.println(Constants.Decorate2);
-        out.println("|            WatchWhat application!          |");
-        out.println("|             [ Version " + Constants.ver + " ]              |");
+        out.println(Constants.Welcome3);
+        out.println(Constants.Welcome4);
+        out.println(Constants.showver);
         out.println(Constants.Decorate2);
     }
 
     public static void login_success() {
         out.println(Constants.Decorate2);
-        out.println("  " + Constants.LoginSuccess + "[ " + Constants.name_temp + " ]");
+        out.println("| " + Constants.logString + "[ " + Constants.name_temp + " ]");
         out.println(Constants.Decorate2);
         out.print("| [ " + Constants.namelever + " ]    ");
-        if (Constants.lvl_temp==1) {
+        if (Constants.lvl_temp == 1) {
             System.out.println("                       |");
         } else {
             System.out.println("   [ New request: " + Constants.inbox_temp + " ]  |");
@@ -51,12 +54,12 @@ public class UILayer {
         boolean is_continue = true;
         while (is_continue) {
             headerUI();
-            out.println("| [1] Register Member                  |");
-            out.println("| [2] Login                            |");
-            out.println("| [9] About me                         |");
-            out.println("| [0] Exit                             |");
-            out.println(Constants.Decorate);
-            out.print(" Please choose one of options above: ");
+            out.println(Constants.buttonregister);
+            out.println(Constants.buttonlogin);
+            out.println(Constants.buttonabout);
+            out.println(Constants.buttonexit);
+            out.println(Constants.Decorate2);
+            out.print(Constants.pleasechoiceString);
             String choice = sc.nextLine();
             switch (choice) {
                 case "1":
@@ -81,8 +84,8 @@ public class UILayer {
 
     public static void registerUI() throws SQLException, ParseException {
         headerUI();
-        out.println("| New Register become to member        |");
-        out.println(Constants.Decorate);
+        out.println(Constants.regiHeader);
+        out.println(Constants.Decorate2);
         UserBL.regiter_member();
         out.print(Constants.Continue);
         sc.nextLine();
@@ -90,7 +93,7 @@ public class UILayer {
 
     public static void memberloginUI() throws SQLException {
         headerLongUI();
-        out.println("| Login into application by member's account |");
+        out.println(Constants.loginHeader);
         out.println(Constants.Decorate2);
         UserBL.login_into();
     }
@@ -100,23 +103,23 @@ public class UILayer {
         while (is_continue) {
             headerLongUI();
             login_success();
-            out.println("| [1] Profile                                |");
-            out.println("| [2] Change password                        |");
-            out.println("| [3] Favourite List                         |");
+            out.println(Constants.buttonprofile);
+            out.println(Constants.buttonchangepass);
+            // out.println(Constants.buttonfavourite);
             if (Constants.lvl_temp == 1) {
-                out.println("| [4] Search and View movie                  |");
-                out.println("| [5] Request                                |");
+                out.println(Constants.buttonsearchmovie);
+                out.println(Constants.buttonrequest);
             }
 
             if (Constants.lvl_temp > 1) {
-                out.println("| [4] Search, View and Update movie          |");
+                out.println(Constants.buttonsearchmovie2);
                 out.println("| ------- Control Panel for Admin ---------- |");
-                out.println("| [5] Manage request                         |");
-                out.println("| [6] Manage members                         |");
+                out.println(Constants.buttonmngrequest);
+                out.println(Constants.buttonmngmember);
             }
-            out.println("| [0] Logout                                 |");
+            out.println(Constants.buttonlogout);
             out.println(Constants.Decorate2);
-            out.print(" Please choose one of options above: ");
+            out.print(Constants.pleasechoiceString);
             String choice = sc.nextLine();
             switch (choice) {
                 case "1":
@@ -144,36 +147,8 @@ public class UILayer {
                         out.println(Constants.Wrongchoice);
                     }
                     if (Constants.lvl_temp > 1) {
-                        System.out.println("M-mem");
+                        Mng_mem();
                     }
-                    break;
-                case "0":
-                    is_continue = false;
-                    break;
-                default:
-                    out.println(Constants.Wrongchoice);
-                    break;
-            }
-        }
-    }
-
-    public static void choice4() throws SQLException {
-        boolean is_continue = true;
-        while (is_continue) {
-            headerUI();
-            login_success();
-            out.println("| [1] Send new a request                     |");
-            out.println("| [2] View requests send                     |");
-            out.println("| [0] Back                                   |");
-            out.println(Constants.Decorate2);
-            out.print(" Please choose one of options above: ");
-            String choice = sc.nextLine();
-            switch (choice) {
-                case "1":
-                    System.out.println("Update ^^");
-                    break;
-                case "2":
-                    System.out.println("Change pass ^^");
                     break;
                 case "0":
                     is_continue = false;
@@ -306,9 +281,10 @@ public class UILayer {
         String c = mov.getMovieDIC();
         String d = "" + mov.getMovieYEAR();
         String e = mov.getmovieCOVER();
-        System.out.printf("[ %-10s | %-43s | %-28s | %-8s | %-70s ]\n", a,b,c,d,e);
+        System.out.printf("[ %-10s | %-43s | %-28s | %-8s | %-70s ]\n", a, b, c, d, e);
         System.out.println(Constants.Decorate4);
     }
+
     public static void show_mov_info2(List<Movie> lst) throws SQLException {
         int n = 0;
         System.out.println(Constants.Decorate4);
@@ -326,10 +302,10 @@ public class UILayer {
             for (Sources sources : lst2) {
                 System.out.println(sources);
             }
-            if (lst2.size()==0) {
+            if (lst2.size() == 0) {
                 System.out.println(Constants.noepisode);
             }
-            if (Constants.lvl_temp>1) {
+            if (Constants.lvl_temp > 1) {
                 MovieBL.update_mov_info(select);
             }
             System.out.print(Constants.Continue);
@@ -364,6 +340,36 @@ public class UILayer {
         sc.nextLine();
     }
 
+    /* Manage Members - Quản lý thành viên */
+    public static void Mng_mem() throws SQLException {
+        boolean is_continue = true;
+        while (is_continue) {
+            headerLongUI();
+            login_success();
+            out.println(Constants.button_mngmem1);
+            out.println(Constants.button_mngmem2);
+            out.println(Constants.buttonback);
+            out.println(Constants.Decorate2);
+            out.print(Constants.pleasechoiceString);
+            String choice = sc.nextLine();
+            switch (choice) {
+                case "1":
+                    UserBL.search_byname();
+                    break;
+                case "2":
+                    UserBL.select_ID();
+                    break;
+                case "0":
+                    is_continue = false;
+                    break;
+                default:
+                    out.println(Constants.Wrongchoice);
+                    break;
+            }
+        }
+    }
+
+    /* About me - Giới thiệu phần mềm */
     public static void aboutme() throws SQLException {
         Process.clrscr();
         out.println(Constants.Decorate2);
@@ -379,4 +385,35 @@ public class UILayer {
         sc.nextLine();
     }
 
+    public static void show_mem_byname(CallableStatement call) throws SQLException {
+        ResultSet rs = call.executeQuery();
+        int count = 0;
+        out.println(Constants.Decorate5);
+        out.println(
+                "| ID    | Name     -         -         - | Email     -         -         -         -          | Birthday    | Since       | Status    | Role   | Account   -         -         - |");
+        String stt = null, role = null;
+        out.println(Constants.Decorate5);
+        while (rs.next()) {
+            if (rs.getInt(6) == 1) {
+                stt = "Actived";
+            } else {
+                stt = "non-Active";
+            }
+            if (rs.getInt(7) == 1) {
+                role = "Member";
+            } else {
+                role = "Admin";
+            }
+            out.printf("| %-5s | %-30s | %-50s | %-11s | %-11s | %-6s | %-6s | %-30s |\n", rs.getInt(1),
+                    rs.getString(2), rs.getString(3), rs.getDate(4), rs.getDate(5), stt, role, rs.getString(8));
+            out.println(Constants.Decorate5);
+            count++;
+        }
+        out.println("  [!] " + count + " member(s) to found");
+        if (count>0) {
+            UserBL.select_ID();    
+        }
+        System.out.print(Constants.Continue);
+        sc.nextLine();
+    }
 }

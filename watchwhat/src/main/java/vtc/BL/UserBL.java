@@ -152,4 +152,33 @@ public class UserBL {
         System.out.print(Constants.Continue);
         sc.nextLine();
     }
+
+    public static void search_byname() throws SQLException {
+        System.out.print(Constants.username);
+        String name = new Process().check_input_empty();
+        UserDAL.get_byname(name);
+    }
+
+    public static void select_ID() throws SQLException {
+        System.out.println(Constants.Decorate6);
+        System.out.print(Constants.id_select);
+        int id = new Process().check_number_empty();
+        System.out.println(Constants.Decorate6);
+        System.out.print(Constants.change_name);
+        String name = new Process().check_input_empty();
+        System.out.println(Constants.Decorate6);
+        System.out.print(Constants.change_email);
+        String email = new Process().check_input_empty();
+        System.out.println(Constants.Decorate6);
+        System.out.print(Constants.change_bd);
+        Date bd = new Process().check_Date();
+        System.out.println(Constants.Decorate6);
+        System.out.print(Constants.change_stt);
+        int stt = new Process().check_number_empty();
+        System.out.println(Constants.Decorate6);
+        System.out.print(Constants.change_lvl);
+        int lvl = new Process().check_number_empty();
+        System.out.println(Constants.Decorate6);
+        UserDAL.update_byid(id,name,email,bd,stt,lvl);
+    }
 }

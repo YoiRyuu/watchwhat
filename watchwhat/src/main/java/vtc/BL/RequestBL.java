@@ -14,14 +14,14 @@ public class RequestBL {
         Boolean is_continue = true;
         while (is_continue) {
             Process.clrscr();
-            System.out.println(Constants.Decorate);
-            System.out.println("|              REQUEST                 |");
-            System.out.println(Constants.Decorate);
-            System.out.println("| 1. Submit customer request           |");
-            System.out.println("| 2. View sent messages                |");
-            System.out.println("| 0. Exit                              |");
-            System.out.println(Constants.Decorate);
-            System.out.print(" Please choose one of options above: ");
+            System.out.println(Constants.Decorate2);
+            System.out.println(Constants.requestheader);
+            System.out.println(Constants.Decorate2);
+            System.out.println(Constants.buttonsendreq);
+            System.out.println(Constants.buttonviewreq);
+            System.out.println(Constants.buttonback);
+            System.out.println(Constants.Decorate2);
+            System.out.print(Constants.pleasechoiceString);
             String choice = sc.nextLine();
             System.out.println(Constants.Decorate1);
             switch (choice) {

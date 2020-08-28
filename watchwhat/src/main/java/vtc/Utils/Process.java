@@ -48,7 +48,7 @@ public class Process {
                 birthdate = Date.valueOf(sc.nextLine());
                 break;
             } catch (Exception e) {
-                System.out.println(Constants.wrongdate);
+                System.out.print(Constants.wrongdate);
             }
         }
         return birthdate;
