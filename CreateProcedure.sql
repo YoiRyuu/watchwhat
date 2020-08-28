@@ -87,3 +87,65 @@ END //
 delimiter ;
 -- DROP PROCEDURE update_mov_info
 -- CALL update_mov_info('1-------10--------20--------30--------40--------50--------60--------70--------80','1-------10--------20--------30--------40','2020','1-------10--------20--------30--------40--------50--------60--------70--------80',26)
+
+-- Tran Dai Loi add
+ALTER TABLE `csdl_movie`.`reques` 
+ADD COLUMN `ans` VARCHAR(550) NULL AFTER `ctm_id`;
+
+delimiter //
+CREATE PROCEDURE sendrequest(IN in2 nvarchar(550), in3 tinyint, in4 int)
+BEGIN
+	INSERT INTO `csdl_movie`.`reques` (`req_content`, `req_status`, `ctm_id`)
+    VALUES (in2, in3, in4);
+END //
+delimiter ;
+
+delimiter //
+CREATE PROCEDURE sent(in id int)
+BEGIN
+	select req_content, req_status, ctm_id, ans
+    from csdl_movie.reques
+    where ctm_id = id;
+END //
+delimiter ;
+
+
+delimiter //
+CREATE PROCEDURE reply(IN content varchar(550), id int)
+BEGIN
+	update reques 
+	set req_status = 2, ans = content, req_id = id
+	where req_id = id;
+END //
+delimiter ;
+
+
+CREATE VIEW bangrequest
+AS
+SELECT customer.ctm_name ,reques.req_content, customer.ctm_id, reques.req_status
+FROM customer INNER JOIN reques ON customer.ctm_id = reques.ctm_id;
+
+SELECT * FROM bangrequest;
+
+
+delimiter //
+CREATE PROCEDURE searchmember_byname(IN input VARCHAR(30))
+BEGIN
+	SELECT ctm_id, SUBSTRING(ctm_name,1,30) AS ctm_name, SUBSTRING(ctm_email,1,50) AS ctm_email, ctm_brithday, ctm_since, ctm_status, ctm_lever, SUBSTRING(ctm_account,1,70) AS ctm_account, SUBSTRING(ctm_pass,1,70) AS ctm_pass
+    FROM customer
+    WHERE ctm_name LIKE concat('%',input,'%');
+END //
+delimiter ;
+-- DROP PROCEDURE searchmember_byname;
+-- CALL searchmember_byname('Long');
+
+delimiter //
+CREATE PROCEDURE updatemember_id(IN input int, inputname VARCHAR(30), inputemail VARCHAR (50), inputdb DATE, setstt int, setlvl int)
+BEGIN
+	UPDATE customer
+    SET ctm_name = inputname, ctm_email = inputemail, ctm_brithday = inputdb, ctm_status = setstt, ctm_lever = setlvl
+    WHERE ctm_id = input;
+END //
+delimiter ;
+-- DROP PROCEDURE updatemember_id;
+-- CALL searchmember_byname('Long');
