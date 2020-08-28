@@ -20,7 +20,8 @@ public class UILayer {
     public static void headerUI() {
         Process.clrscr();
         out.println(Constants.Decorate);
-        out.println("| Welcome to WatchWhat application!    |");
+        out.println(Constants.Welcome1);
+        out.println(Constants.Welcome2);
         out.println("|          [ Version " + Constants.ver + " ]           |");
         out.println(Constants.Decorate);
     }
@@ -37,7 +38,12 @@ public class UILayer {
         out.println(Constants.Decorate2);
         out.println("  " + Constants.LoginSuccess + "[ " + Constants.name_temp + " ]");
         out.println(Constants.Decorate2);
-        out.println("| [ " + Constants.namelever + " ]    [ Since: " + Constants.since_temp + " ] |");
+        out.print("| [ " + Constants.namelever + " ]    ");
+        if (Constants.lvl_temp==1) {
+            System.out.println("                       |");
+        } else {
+            System.out.println("   [ New request: " + Constants.inbox_temp + " ]  |");
+        }
         out.println(Constants.Decorate2);
     }
 
@@ -315,8 +321,7 @@ public class UILayer {
         if (n > 0) {
             System.out.println(Constants.numbermov + n);
             System.out.print(Constants.mov_select);
-            int select = sc.nextInt();
-            sc.nextLine();
+            int select = new Process().check_number_empty();
             List<Sources> lst2 = new SourcesBL().getLinkMovies(select);
             for (Sources sources : lst2) {
                 System.out.println(sources);
@@ -325,10 +330,7 @@ public class UILayer {
                 System.out.println(Constants.noepisode);
             }
             if (Constants.lvl_temp>1) {
-                //update film
-                System.out.print(Constants.update_mov);
-                String ys = sc.nextLine();
-                MovieBL.update_mov_info(ys,select);
+                MovieBL.update_mov_info(select);
             }
             System.out.print(Constants.Continue);
             sc.nextLine();

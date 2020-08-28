@@ -95,14 +95,28 @@ public class RequestDAL {
         String sql2 = "SELECT * FROM bangrequest";
         Statement stmt = DbUtil.getConnection().createStatement();
         ResultSet rs = stmt.executeQuery(sql2);
+        int n =0;
         while (rs.next()) {
             if (rs.getInt(4) == 1) {
+                n++;
                 xuly = "Processing";
                 System.out.println("[ " + rs.getString(1) + " ]  [ " + rs.getString(2) + " ]  [ UserId: " + rs.getInt(3) + " ]  [ " + xuly + " ]");
                 System.out.println(Constants.Decorate1);
             }
         }
-
+        Constants.inbox_temp =n;
+    }
+    public static void getInbox() throws SQLException {
+        String sql2 = "SELECT * FROM bangrequest";
+        Statement stmt = DbUtil.getConnection().createStatement();
+        ResultSet rs = stmt.executeQuery(sql2);
+        int n =0;
+        while (rs.next()) {
+            if (rs.getInt(4) == 1) {
+                n++;
+            }
+        }
+        Constants.inbox_temp =n;
     }
 
     public static void ListReqNoReply() throws SQLException {

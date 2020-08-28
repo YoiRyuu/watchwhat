@@ -33,6 +33,7 @@ public class Process {
                 } else {
                     a = false;
                 }
+                sc.nextLine();
             } catch (Exception e) {
                 System.out.println(Constants.checkNumberEmpty);
                 sc.nextLine();

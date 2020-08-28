@@ -6,6 +6,7 @@ import java.text.ParseException;
 import java.util.List;
 import java.util.Scanner;
 
+import vtc.DAL.RequestDAL;
 import vtc.DAL.UserDAL;
 import vtc.Utils.Constants;
 import vtc.Utils.Process;
@@ -72,10 +73,11 @@ public class UserBL {
                     n = user.getUserID();
                     switch (m) {
                         case 1:
-                            Constants.namelever = "Lever: Member";
+                            Constants.namelever = "Role: Member";
                             break;
                         case 2:
-                            Constants.namelever = "Lever: Admin ";
+                            Constants.namelever = "Role: Admin ";
+                            RequestDAL.getInbox();
                             break;
 
                         default:

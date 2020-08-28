@@ -49,20 +49,22 @@ public class MovieBL {
     }
 
     // For Admin
-    public static void update_mov_info(String ys, int select) throws SQLException {
+    public static void update_mov_info(int select) throws SQLException {
         boolean is_continue = true;
         while (is_continue) {
+            System.out.print(Constants.update_mov);
+            String ys = new Process().check_input_empty();
             switch (ys) {
                 case "y":
                 case "Y":
-                    System.out.print("name ");
+                    System.out.print(Constants.changenamemov);
                     String name = new Process().check_input_empty();
-                    System.out.print("dir ");
+                    System.out.print(Constants.changedirmov);
                     String dir = sc.nextLine();
-                    System.out.print("year ");
+                    System.out.print(Constants.changeyearmov);
                     int year = sc.nextInt();
                     sc.nextLine();
-                    System.out.print("cover ");
+                    System.out.print(Constants.changeurlmov);
                     String cv = sc.nextLine();
                     MovieDAL.update_movinfo(name, dir, year, cv, select);
                     is_continue = false;
