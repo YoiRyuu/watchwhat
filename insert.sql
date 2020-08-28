@@ -86,6 +86,8 @@ INSERT INTO `csdl_movie`.`sources` (`sc_id`, `sc_episode`, `sc_url`, `movie_id`)
 INSERT INTO `csdl_movie`.`sources` (`sc_id`, `sc_episode`, `sc_url`, `movie_id`) VALUES ('23', '936', 'http://www.phimmoizz.net/phim/dao-hai-tac-i0-665/', '23');
 INSERT INTO `csdl_movie`.`sources` (`sc_id`, `sc_episode`, `sc_url`, `movie_id`) VALUES ('24', '53', 'http://www.phimmoizz.net/phim/cam-tu-nam-ca-11166/', '24');
 INSERT INTO `csdl_movie`.`sources` (`sc_id`, `sc_episode`, `sc_url`, `movie_id`) VALUES ('25', '32', 'http://www.phimmoizz.net/phim/dai-duong-vinh-dieu-2-5125/', '25');
+INSERT INTO `csdl_movie`.`sources` (`sc_episode`, `sc_url`, `movie_id`) VALUES ('1', 'https://anime47.com/xem-phim-boruto-naruto-next-generations-ep-001/147194.html', '5');
+INSERT INTO `csdl_movie`.`sources` (`sc_episode`, `sc_url`, `movie_id`) VALUES ('2', 'https://anime47.com/xem-phim-boruto-naruto-next-generations-ep-002/147195.html', '5');
 UPDATE `csdl_movie`.`sources` SET `sc_url` = 'http://www.phimmoizz.net/phim/ga-he-i2-8592/' WHERE (`sc_id` = '1');
 
 
@@ -294,3 +296,5 @@ INSERT INTO `csdl_movie.aboutme` (`ver`,`notepatch`) VALUES ('0.4.2','Add:
  - Thêm chức năng cập nhập profile');
 INSERT INTO `csdl_movie.aboutme` (`ver`,`notepatch`) VALUES ('0.4.3','Fix:\n- Sửa lỗi khiến việc tạo tài khoản mới không có thông tin về ngày tạo tài khoản\n- Sửa lại giao diện đăng ký\nAdd:\n- Thêm chức năng tìm kiếm phim theo tên');
 INSERT INTO `csdl_movie`.`aboutme` (`verid`, `ver`, `notepatch`) VALUES ('4', '0.4.4', 'Fix:\n- Sửa lỗi khiến việc tạo tài khoản mới không có thông tin về ngày tạo tài khoản\n- Sửa lại giao diện đăng ký\n- Sửa lại giao diện thông tin tìm kiếm phim bằng tên');
+INSERT INTO `csdl_movie`.`aboutme` (`ver`, `notepatch`) VALUES ('0.4.5', 'Add:\n- Thêm chức năng xem và gửi yêu cầu cho tài khoản thành viên\n- Thêm chức năng xem và trả lời yêu cầu cho tài khoản admin');
+INSERT INTO `csdl_movie`.`aboutme` (`ver`, `notepatch`) VALUES ('0.4.6', 'Add:\n- Thêm chức năng quản lý thành viên cho tài khoản admin\nFix:\n- Sửa một số lỗi tồn đọng từ các phiên bản trước\nOptimal\n- Chỉnh lại giao diện chính và phụ cho đồng bộ');
