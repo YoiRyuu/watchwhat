@@ -1,7 +1,9 @@
 package vtc;
 
 import java.sql.Date;
+import static org.junit.Assert.assertTrue;
 
+import org.junit.Test;
 import vtc.DAL.UserDAL;
 
 /**

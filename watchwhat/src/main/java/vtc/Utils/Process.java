@@ -11,7 +11,7 @@ import vtc.Persistance.User;
 public class Process {
     static Scanner sc = new Scanner(System.in);
 
-    public String check_input_empty() {
+    public String check_string_empty() {
         while (true) {
             String input = sc.nextLine();
             if (input.isEmpty()) {
@@ -29,22 +29,24 @@ public class Process {
             try {
                 input = sc.nextInt();
                 if (input < 1) {
-                    System.out.println(Constants.checkNumberEmpty);
+                    System.out.print(Constants.checkNumberEmpty);
                 } else {
                     a = false;
                 }
                 sc.nextLine();
             } catch (Exception e) {
-                System.out.println(Constants.checkNumberEmpty);
+                System.out.print(Constants.checkNumberEmpty);
                 sc.nextLine();
             }
         }
         return input;
     }
-    public Date check_Date() {
+
+    public Date check_Date(String text) {
         Date birthdate = null;
         while (true) {
             try {
+                System.out.print(text);
                 birthdate = Date.valueOf(sc.nextLine());
                 break;
             } catch (Exception e) {
@@ -61,7 +63,7 @@ public class Process {
         String userString = null;
         while (checkuser) {
             System.out.print(Constants.username);
-            userString = new Process().check_input_empty();
+            userString = new Process().check_string_empty();
             int m = 0;
             // so sanh username nhap vao voi list xem co trung hay khong
             for (User user : lst) {
@@ -100,6 +102,21 @@ public class Process {
             default:
                 System.out.print(Constants.OnlyYesNo);
                 return tryAgain();
+        }
+    }
+
+    public int Yes_No_int() {
+        String key = new Process().check_string_empty();
+        switch (key) {
+            case "y":
+            case "Y":
+                return 0;
+            case "n":
+            case "N":
+                return 1;
+            default:
+            System.out.print(Constants.OnlyYesNo);
+                return Yes_No_int();
         }
     }
 }

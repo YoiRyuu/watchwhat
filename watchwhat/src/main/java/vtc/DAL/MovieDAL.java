@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import vtc.BL.MovieBL;
 import vtc.Persistance.Movie;
 import vtc.Utils.Constants;
 
@@ -82,6 +83,28 @@ public class MovieDAL {
             System.out.println(Constants.movieSuccess);
         } catch (Exception e) {
             System.out.println(Constants.movieFailed);
+        }
+    }
+
+    public static void remove_favouriteDAL(int ctm, int mov) throws SQLException {
+        String callStoreProcedure = "{CALL rvfavouritelist(?,?)}";
+        try (CallableStatement callableStatement = DbUtil.getConnection().prepareCall(callStoreProcedure)) {
+            callableStatement.setInt(1, ctm);
+            callableStatement.setInt(2, mov);
+            callableStatement.execute();
+            System.out.println(Constants.movieSuccess);
+        } catch (Exception e) {
+            System.out.println(Constants.movieFailed);
+        }
+    }
+
+    public static void view_favourtieDAL(int ctm) {
+        String sql = "CALL favouritelist(?)";
+        try (CallableStatement callableStatement = DbUtil.getConnection().prepareCall(sql)){
+            callableStatement.setInt(1, ctm);
+            MovieBL.viewfavou(callableStatement);
+        } catch (Exception e) {
+            System.out.println("Loi view favourite");
         }
     }
 }

@@ -22,6 +22,6 @@ public class Nation {
 
     @Override
     public String toString() {
-        return "| " + this.nationID + " | " + this.nationNAME;
+        return "[" + this.nationID + "] " + this.nationNAME;
     }
 }

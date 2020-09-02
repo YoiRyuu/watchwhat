@@ -281,6 +281,30 @@ INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) 
 INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('32', '2', '24');
 INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('33', '2', '25');
 
+-- insert favourite
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('1', '2');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('1', '3');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('1', '5');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('2', '1');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('2', '5');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('2', '7');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('2', '2');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('2', '9');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('2', '3');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('5', '4');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('5', '7');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('5', '3');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('5', '4');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('5', '5');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('1', '6');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('1', '8');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('1', '22');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('11', '5');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('4', '4');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('4', '6');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('4', '7');
+INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('4', '8');
+
 
 -- insert request
 INSERT INTO `csdl_movie`.`reques` (`req_id`, `req_content`, `req_status`, `ctm_id`) VALUES ('1', 'Tôi thấy hơn ít phim các bạn cập nhâp thêm nhiều phim lên!!!!', '1', '3');
@@ -298,3 +322,4 @@ INSERT INTO `csdl_movie.aboutme` (`ver`,`notepatch`) VALUES ('0.4.3','Fix:\n- S�
 INSERT INTO `csdl_movie`.`aboutme` (`verid`, `ver`, `notepatch`) VALUES ('4', '0.4.4', 'Fix:\n- Sửa lỗi khiến việc tạo tài khoản mới không có thông tin về ngày tạo tài khoản\n- Sửa lại giao diện đăng ký\n- Sửa lại giao diện thông tin tìm kiếm phim bằng tên');
 INSERT INTO `csdl_movie`.`aboutme` (`ver`, `notepatch`) VALUES ('0.4.5', 'Add:\n- Thêm chức năng xem và gửi yêu cầu cho tài khoản thành viên\n- Thêm chức năng xem và trả lời yêu cầu cho tài khoản admin');
 INSERT INTO `csdl_movie`.`aboutme` (`ver`, `notepatch`) VALUES ('0.4.6', 'Add:\n- Thêm chức năng quản lý thành viên cho tài khoản admin\nFix:\n- Sửa một số lỗi tồn đọng từ các phiên bản trước\nOptimal\n- Chỉnh lại giao diện chính và phụ cho đồng bộ');
+INSERT INTO `csdl_movie`.`aboutme` (`ver`, `notepatch`) VALUES ('0.4.7', 'Fix:\n- Sửa lại giao diện chức năng request cho member và quản lý request cho admin\n- Sắp xếp lại Code lại theo Layer\n- Sắp xếp lại Code để dễ theo dõi sau này\n- Sửa lại một chút về thanh hiển thị thông tin khi đăng nhập thành công\n- Sửa một số lỗi còn tồn đọng ở bản trước\nAdd:\n- Thêm dòng hiển thị tên giao diện đang được sử dụng');

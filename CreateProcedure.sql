@@ -149,3 +149,35 @@ END //
 delimiter ;
 -- DROP PROCEDURE updatemember_id;
 -- CALL searchmember_byname('Long');
+
+delimiter //
+CREATE PROCEDURE favouritelist(IN input int)
+BEGIN
+	SELECT DISTINCT *
+	FROM listoffvorites
+    WHERE ctm_id = input AND stt = 1;
+END //
+delimiter ;
+-- DROP PROCEDURE favouritelist
+-- CALL favouritelist(1)
+
+delimiter //
+CREATE PROCEDURE addfavouritelist(IN input int, input2 int)
+BEGIN
+	INSERT INTO listoffvorites (ctm_id, movie_id)
+	VALUES (input, input2);
+END //
+delimiter ;
+-- DROP PROCEDURE addfavouritelist
+-- CALL addfavouritelist(1,20)
+
+delimiter //
+CREATE PROCEDURE rvfavouritelist(IN input int, input2 int)
+BEGIN
+	UPDATE listoffvorites
+	SET stt = 2
+    WHERE ctm_id = input AND movie_id = input2;
+END //
+delimiter ;
+-- DROP PROCEDURE rvfavouritelist
+-- CALL rvfavouritelist(1,2)

@@ -60,12 +60,12 @@ CREATE TABLE customer(
 );
 CREATE TABLE ListOfFvorites(
 	lof_id			INT AUTO_INCREMENT,
-    lof_name		NVARCHAR(50) NOT NULL,
     ctm_id			INT,
     movie_id		INT,
+    stt				TINYINT default 1,
     PRIMARY KEY (lof_id),
-    FOREIGN KEY (lof_id) REFERENCES customer(ctm_id),
-    FOREIGN KEY (lof_id) REFERENCES movie(movie_id)
+    FOREIGN KEY (ctm_id) REFERENCES customer(ctm_id),
+    FOREIGN KEY (movie_id) REFERENCES movie(movie_id)
 );
 CREATE TABLE reques(
 	req_id			INT AUTO_INCREMENT,

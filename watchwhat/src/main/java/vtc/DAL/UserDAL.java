@@ -51,7 +51,6 @@ public class UserDAL {
 
     public static void insert_mem(String userString, String passString, String nameString, String emailString,
             Date birthdDate) throws SQLException {
-
         callStoreProcedure = "{CALL createCustomer(?,?,?,?,?)}";
         try (CallableStatement callableStatement = DbUtil.getConnection().prepareCall(callStoreProcedure)) {
             // insert member
