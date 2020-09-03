@@ -15,7 +15,7 @@ public class Constants {
     public static String user_temp;
     public static String pass_temp;
     public static int inbox_temp = 0;
-    public static String ver = "0.4.7";
+    public static String ver = "0.4.8";
     public static String notepatch;
     public static int idmov_temp;
 
@@ -28,6 +28,9 @@ public class Constants {
     public static String Decorate5  = "+-------+--------------------------------+----------------------------------------------------+-------------+-------------+------------+--------+--------------------------------+";
     public static String Decorate6  = "+----------------------------------------------------------+--------------------------------------------------+";
     public static String Decorate7  = "+----------------------------------------------------+------------+----------------------------------------------------+";
+    public static String Decorate8  = "+------------+---------------------------------------------+------------------------------+------+";
+    public static String line       = "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"; //196
+    public static String space      = " ";
 
     // Welcome & Header
     public static String Welcome1               = "|    Welcome to WatchWhat application!       |";
@@ -71,25 +74,29 @@ public class Constants {
     public static String buttonupdatepro        = "| [2] Update Profile                         |";
     public static String buttonsearchmovname    = "| [1] Search movie by name                   |";
     public static String buttonsearchmovnation  = "| [2] Search movie by nation                 |";
+    public static String buttonSelect           = "  [S] Select ID movie to get link";
+    public static String buttonRemove           = "  [R] Remove movie from list";
     
     // Warning
-    public static String pleasechoiceString = " Please choose one of options above: ";
+    public static String pleasechoiceInt    = "  Input a number to choose    : ";
+    public static String pleasechoiceString = "  Input a character to choose : ";
     public static String Wrongchoice        = "  [!] Please choice again!";
     public static String Continue           = "  [>] Press any key for continue... ";
     public static String ExitApp            = "  [!] Thank you for used application!";
     public static String RegisterSuccess    = "  [!] Register new Account is success!";
     public static String RegisterFailed     = "  [x] Register new Account is failed!";
-    public static String ChangePassSuccess  = "\n  [!] (～￣▽￣)～ New password has change!";
-    public static String ChangePassFailed   = "\n  [x] (っ °Д °;)っ Change password failed!";
-    public static String ProfileSuccess     = "\n  [!] (～￣▽￣)～ New profile has change!";
-    public static String ProfileFailed      = "\n  [x] (っ °Д °;)っ Change profile failed!";
-    public static String movieSuccess       = "\n  [!] New info has change!";
-    public static String movieFailed        = "\n  [x] Change info failed!";
+    public static String ChangePassSuccess  = "  [!] (～￣▽￣)～ New password has change!";
+    public static String ChangePassFailed   = "  [x] (っ °Д °;)っ Change password failed!";
+    public static String ProfileSuccess     = "  [!] (～￣▽￣)～ New profile has change!";
+    public static String ProfileFailed      = "  [x] (っ °Д °;)っ Change profile failed!";
+    public static String movieSuccess       = "  [!] New info has change!";
+    public static String movieFailed        = "  [x] Change info failed!";
     public static String LoginSuccess       = "  [!] Login successful! Welcome, ";
     public static String LoginFailed        = "  [x] Wrong username or password!";
-    public static String Again              = "  [?] Do you want try again? (Y/N)...";
-    public static String WantUpdate         = "  [?] Do you want update? (Y/N)...";
-    public static String OnlyYesNo          = "  [!] You can only choice Y or N...";
+    public static String Again              = "  [?] Do you want try again? (Y/N)... ";
+    public static String WantUpdate         = "  [?] Do you want update? (Y/N)... ";
+    public static String OnlyYesNo          = "  [!] You can only choice Y or N... ";
+    public static String WrongSelect        = "  [!] Input wrong, please try again... ";
     public static String sendRequstUser     = "  [!] Submit request successfully!!!";
     public static String choiceoption       = "  [>] Please choose one of options above: ";
     // Error
@@ -115,12 +122,12 @@ public class Constants {
     public static String newbirthdate   = "  [>] New birthdate (yyyy-MM-dd)  : ";
     
     // Search
-    public static String mov_name       = " [>] Movie's name: ";
-    public static String mov_nation     = " [>] ID Nation: ";
-    public static String mov_select     = " [>] Input ID movie to get link: ";
-    public static String numbermov      = " [!] Movie had found: ";
-    public static String noname         = " [x] Movie not found ";
-    public static String noepisode      = " [x] Movie's episode not have ";
+    public static String mov_name       = "  [>] Movie's name: ";
+    public static String mov_nation     = "  [>] ID Nation: ";
+    public static String mov_select     = "  [>] Input ID movie to get link: ";
+    public static String numbermov      = "  [!] Movie had found: ";
+    public static String noname         = "  [x] Movie not found ";
+    public static String noepisode      = "  [x] Movie's episode not have ";
     public static String id_select      = "|  [>] Input ID                                            : ";
     public static String change_name    = "|  [>] Change Name to                                      : ";
     public static String change_email   = "|  [>] Change Email to                                     : ";
@@ -128,28 +135,28 @@ public class Constants {
     public static String change_stt     = "|  [>] Change Status to ([1] Actived or [2] Non-active)    : ";
     public static String change_lvl     = "|  [>] Change Role to ([1] Member or [2] Admin)            : ";
     // update film
-    public static String changenamemov  = "[~] Change Name      : ";
-    public static String changedirmov   = "[~] Change Director  : ";
-    public static String changeyearmov  = "[~] Change Year      : ";
-    public static String changeurlmov   = "[~] Change URL       : ";
-    public static String update_mov     = "[?] Do you want movie's infomation update (Y/N): ";
+    public static String changenamemov  = "  [~] Change Name      : ";
+    public static String changedirmov   = "  [~] Change Director  : ";
+    public static String changeyearmov  = "  [~] Change Year      : ";
+    public static String changeurlmov   = "  [~] Change URL       : ";
+    public static String update_mov     = "  [?] Do you want movie's infomation update (Y/N): ";
     
     // infor app
     public static String aboutme1 = "| Name: WatchWhat                            |";
-    public static String aboutme2 = "| Version: " + ver + "                              |";
+    public static String aboutme2 = "| Version: " + ver + "                             |";
     public static String aboutme3 = "| Creator: Phan Gia Long & Tran Dai Loi      |";
     public static String aboutme4 = "| Intructor: Vu Tran Lam                     |";
     public static String aboutme5 = "| Code by Java, 2020                         |";
 
     //View profile
-    public static String profileinfo1   = "| My aliases, yeah I am only one             | ";
+    public static String profileinfo1   = "| My ID, yeah I am only one                  | ";
     public static String profileinfo2   = "| My name is                                 | ";
     public static String profileinfo3   = "| Account to log into the system             | ";
-    public static String profileinfo4   = "| Password to log into the system            | hmm...";
+    public static String profileinfo4   = "| Password to log into the system            | hmm... that is secret                      |";
     public static String profileinfo5   = "| Electronic Mail, oh is Email               | ";
     public static String profileinfo6   = "| The first day you cried                    | ";
     public static String profileinfo7   = "| Big hand hah                               | ";
-    public static String profileinfo7_1 = "Hehe, just is member no more o(*￣▽￣*)o";
-    public static String profileinfo7_2 = "Yep, I'm BOSS ( •̀ ω •́ )✧";
+    public static String profileinfo7_1 = "Hehe, just is member no more o(*￣▽￣*)    |";
+    public static String profileinfo7_2 = "Yep, I'm BOSS ( •̀ ω •́ )✧                   |";
     public static String profileinfo8   = "| Join into the system from                  | ";
 }

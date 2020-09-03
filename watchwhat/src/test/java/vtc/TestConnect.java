@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class TestConnect {
     @Test
-    public void Connect1(){
+    public void Connect_OK(){
         String msg = "Test connect OK";
         try {
             String[] a = new String[10];
@@ -16,7 +16,7 @@ public class TestConnect {
     }
 
     @Test
-    public void Connect2(){
+    public void Connect_fail(){
         //change password to wrong password
         String msg = "Test connect failed";
         try {

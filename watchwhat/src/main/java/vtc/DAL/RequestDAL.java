@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Scanner;
 
 import vtc.Persistance.Request;
+import vtc.UI.RequestUI;
 import vtc.Utils.Constants;
-import vtc.Utils.UILayer;
 
 public class RequestDAL {
     static Scanner sc = new Scanner(System.in);
@@ -83,7 +83,7 @@ public class RequestDAL {
             } else {
                 xuly = "No process";
             }
-            UILayer.ShowContentRequest(rs.getString(1), xuly, rs.getString(4));
+            RequestUI.ShowContentRequest(rs.getString(1), xuly, rs.getString(4));
         }
     }
 
@@ -98,7 +98,7 @@ public class RequestDAL {
             if (rs.getInt(4) == 1) {
                 n++;
                 xuly = "Processing";
-                UILayer.ContentMail(rs.getString(1), rs.getString(2), rs.getInt(3), xuly);
+                RequestUI.ContentMail(rs.getString(1), rs.getString(2), rs.getInt(3), xuly);
             }
         }
         Constants.inbox_temp = n;
@@ -123,7 +123,7 @@ public class RequestDAL {
         ResultSet rs = stmt.executeQuery(sql);
         while (rs.next()) {
             if (rs.getInt(3) == 1) {
-                UILayer.ContentMail2(rs.getInt(1), rs.getString(2), rs.getInt(4));
+                RequestUI.ContentMail2(rs.getInt(1), rs.getString(2), rs.getInt(4));
             }
         }
     }

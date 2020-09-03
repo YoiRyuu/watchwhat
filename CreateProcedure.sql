@@ -48,13 +48,6 @@ delimiter ;
 -- CALL updateprofile(1,'Long','abc@gmail.com','1994-12-12');
 
 delimiter //
-CREATE PROCEDURE sendrequest(IN in2 nvarchar(550), in3 tinyint, in4 int)
-BEGIN
-	INSERT INTO csdl_movie.`reques` (req_content, req_status, ctm_id)
-    VALUES (in2, in3, in4);
-END //
-delimiter ;
-
 delimiter //
 CREATE PROCEDURE search_nation(IN input int)
 BEGIN
@@ -151,15 +144,15 @@ delimiter ;
 -- CALL searchmember_byname('Long');
 
 delimiter //
-CREATE PROCEDURE favouritelist(IN input int)
+CREATE PROCEDURE listfavourite(IN cus_id int)
 BEGIN
-	SELECT DISTINCT *
-	FROM listoffvorites
-    WHERE ctm_id = input AND stt = 1;
+	SELECT a.movie_id, b.movie_name,b.movie_directors,b.movie_year,b.movie_premiereDay,b.movie_coverImage,b.movie_Certificate
+	FROM listoffvorites AS a INNER JOIN movie AS b ON a.movie_id = b.movie_id
+	WHERE a.ctm_id = cus_id AND a.stt = 1;
 END //
 delimiter ;
--- DROP PROCEDURE favouritelist
--- CALL favouritelist(1)
+-- DROP PROCEDURE listfavourite
+-- CALL listfavourite(1)
 
 delimiter //
 CREATE PROCEDURE addfavouritelist(IN input int, input2 int)

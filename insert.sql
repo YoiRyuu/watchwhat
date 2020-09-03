@@ -310,16 +310,11 @@ INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('4', '8
 INSERT INTO `csdl_movie`.`reques` (`req_id`, `req_content`, `req_status`, `ctm_id`) VALUES ('1', 'Tôi thấy hơn ít phim các bạn cập nhâp thêm nhiều phim lên!!!!', '1', '3');
 
 -- insert about
-INSERT INTO `csdl_movie.aboutme` (`ver`,`notepatch`) VALUES ('0.4.1','Add:
- - Thêm chức năng đổi mật khẩu
- Fix:
- - Sửa lại tên file
- - Sắp xếp lại các file về đúng layer');
-INSERT INTO `csdl_movie.aboutme` (`ver`,`notepatch`) VALUES ('0.4.2','Add:
- - Thêm chức năng xem profile
- - Thêm chức năng cập nhập profile');
-INSERT INTO `csdl_movie.aboutme` (`ver`,`notepatch`) VALUES ('0.4.3','Fix:\n- Sửa lỗi khiến việc tạo tài khoản mới không có thông tin về ngày tạo tài khoản\n- Sửa lại giao diện đăng ký\nAdd:\n- Thêm chức năng tìm kiếm phim theo tên');
-INSERT INTO `csdl_movie`.`aboutme` (`verid`, `ver`, `notepatch`) VALUES ('4', '0.4.4', 'Fix:\n- Sửa lỗi khiến việc tạo tài khoản mới không có thông tin về ngày tạo tài khoản\n- Sửa lại giao diện đăng ký\n- Sửa lại giao diện thông tin tìm kiếm phim bằng tên');
-INSERT INTO `csdl_movie`.`aboutme` (`ver`, `notepatch`) VALUES ('0.4.5', 'Add:\n- Thêm chức năng xem và gửi yêu cầu cho tài khoản thành viên\n- Thêm chức năng xem và trả lời yêu cầu cho tài khoản admin');
-INSERT INTO `csdl_movie`.`aboutme` (`ver`, `notepatch`) VALUES ('0.4.6', 'Add:\n- Thêm chức năng quản lý thành viên cho tài khoản admin\nFix:\n- Sửa một số lỗi tồn đọng từ các phiên bản trước\nOptimal\n- Chỉnh lại giao diện chính và phụ cho đồng bộ');
-INSERT INTO `csdl_movie`.`aboutme` (`ver`, `notepatch`) VALUES ('0.4.7', 'Fix:\n- Sửa lại giao diện chức năng request cho member và quản lý request cho admin\n- Sắp xếp lại Code lại theo Layer\n- Sắp xếp lại Code để dễ theo dõi sau này\n- Sửa lại một chút về thanh hiển thị thông tin khi đăng nhập thành công\n- Sửa một số lỗi còn tồn đọng ở bản trước\nAdd:\n- Thêm dòng hiển thị tên giao diện đang được sử dụng');
+INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.1', 'Add:\n- Thêm chức năng đổi mật khẩu\n Fix:\n- Sửa lại tên file\n- Sắp xếp lại các file về đúng layer');
+INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.2', 'Add:\n- Thêm chức năng xem profile\n- Thêm chức năng cập nhập profile');
+INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.3', 'Fix:\n- Sửa lỗi khiến việc tạo tài khoản mới không có thông tin về ngày tạo tài khoản\n- Sửa lại giao diện đăng ký\nAdd:\n- Thêm chức năng tìm kiếm phim theo tên');
+INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.4', 'Fix:\n- Sửa lỗi khiến việc tạo tài khoản mới không có thông tin về ngày tạo tài khoản\n- Sửa lại giao diện đăng ký\n- Sửa lại giao diện thông tin tìm kiếm phim bằng tên');
+INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.5', 'Add:\n- Thêm chức năng xem và gửi yêu cầu cho tài khoản thành viên\n- Thêm chức năng xem và trả lời yêu cầu cho tài khoản admin');
+INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.6', 'Add:\n- Thêm chức năng quản lý thành viên cho tài khoản admin\nFix:\n- Sửa một số lỗi tồn đọng từ các phiên bản trước\nOptimal\n- Chỉnh lại giao diện chính và phụ cho đồng bộ');
+INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.7', 'Fix:\n- Sửa lại giao diện chức năng request cho member và quản lý request cho admin\n- Sắp xếp lại Code lại theo Layer\n- Sắp xếp lại Code để dễ theo dõi sau này\n- Sửa lại một chút về thanh hiển thị thông tin khi đăng nhập thành công\n- Sửa một số lỗi còn tồn đọng ở bản trước\nAdd:\n- Thêm dòng hiển thị tên giao diện đang được sử dụng');
+INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.8', 'Add:\n- Thêm chức năng Danh sách phim yêu thích\nFix:\n- Sửa lại UI ra thành từng phần để dễ quản lý\n- Sửa lại một số chỗ UI cho thuận mắt\n- Sửa một số lỗi');

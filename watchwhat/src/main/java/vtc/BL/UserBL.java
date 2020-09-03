@@ -10,8 +10,9 @@ import vtc.DAL.RequestDAL;
 import vtc.DAL.UserDAL;
 import vtc.Utils.Constants;
 import vtc.Utils.Process;
-import vtc.Utils.UILayer;
 import vtc.Persistance.User;
+import vtc.UI.LoginUI;
+import vtc.UI.ProfileUI;
 
 public class UserBL {
     static Scanner sc = new Scanner(System.in);
@@ -57,7 +58,7 @@ public class UserBL {
         }
         if (n > 0) {
             // Chay UI cua member
-            UILayer.memberloginUI_success();
+            LoginUI.memberloginUI_success();
             return 1;
         } else {
             System.out.println(Constants.LoginFailed);
@@ -71,7 +72,7 @@ public class UserBL {
         int n = 0;
         for (User user : lst) {
             if (Constants.id_temp == user.getUserID() && oldpass.equals(user.getUserPass())) {
-                UILayer.input_newpass();
+                ProfileUI.input_newpass();
                 UserDAL.update_pass(user.getUserID(), Constants.pass_temp);
                 n = 1;
                 break;

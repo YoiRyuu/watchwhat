@@ -2,9 +2,9 @@ package vtc;
 
 import java.sql.Connection;
 
-import vtc.Utils.Aboutme;
-import vtc.Utils.UILayer;
 import vtc.DAL.DbUtil;
+import vtc.Persistance.Aboutme;
+import vtc.UI.MainUI;
 public class App {
     public static void main(String[] args) throws Exception {
         // Connect to Server
@@ -12,7 +12,7 @@ public class App {
             System.out.println("Connected to MySql Server.");            
             // welcome UI
             Aboutme.autogetAbout();
-            UILayer.welcomeUI();
+            MainUI.welcomeUI();
         } catch (Exception e) {
             System.out.println("Connection Error!");
             e.printStackTrace();

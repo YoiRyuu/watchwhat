@@ -1,17 +1,14 @@
 package vtc.BL;
 
-import java.sql.CallableStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
 import vtc.DAL.MovieDAL;
-import vtc.Persistance.Nation;
 import vtc.Persistance.Movie;
+import vtc.UI.MovieUI;
 import vtc.Utils.Constants;
 import vtc.Utils.Process;
-import vtc.Utils.UILayer;
 
 public class MovieBL {
     static Scanner sc = new Scanner(System.in);
@@ -31,12 +28,12 @@ public class MovieBL {
 
     public static void searchMovieName(String movname) throws SQLException {
         List<Movie> lst = new MovieBL().getNameMovies(movname);
-        UILayer.show_mov_list(lst);
+        MovieUI.show_mov_list(lst);
     }
 
     public static void searchMovieNation(int id) throws SQLException {
         List<Movie> lst2 = new MovieBL().getNationMovies(id);
-        UILayer.show_mov_list(lst2);
+        MovieUI.show_mov_list(lst2);
     }
 
     // For Admin
@@ -71,14 +68,5 @@ public class MovieBL {
         }
     }
 
-    public static void removefavou(int ctm, int mov) throws SQLException {
-        MovieDAL.remove_favouriteDAL(ctm, mov);
-    }
-    public static void viewfavou(CallableStatement callableStatement) throws SQLException {
-        ResultSet rSet = callableStatement.executeQuery();
-        int count = 0;
-        while (rSet.next()) {
-            Constants.idmov_temp = rSet.getInt(3);
-        }
-    }
+    
 }

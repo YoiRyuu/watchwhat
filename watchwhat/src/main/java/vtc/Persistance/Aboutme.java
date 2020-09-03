@@ -1,14 +1,15 @@
-package vtc.Utils;
+package vtc.Persistance;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
 import vtc.DAL.DbUtil;
+import vtc.Utils.Constants;
 
 public class Aboutme {
     public static void getAbout() {
-        String sql = "SELECT * FROM csdl_movie.aboutme ORDER BY verid DESC";
+        String sql = "SELECT * FROM csdl_movie.aboutme ORDER BY verid DESC LIMIT 3";
         try (Connection con = DbUtil.getConnection()) {
             Statement stm = con.createStatement();
             ResultSet rs = stm.executeQuery(sql);

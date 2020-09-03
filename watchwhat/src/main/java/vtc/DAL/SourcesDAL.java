@@ -11,7 +11,7 @@ import vtc.Persistance.Sources;
 
 public class SourcesDAL {
     public List<Sources> getSourcesByID(int select) {
-        String sql = "SELECT * FROM csdl_movie.sources WHERE movie_id = " + select;
+        String sql = "SELECT * FROM csdl_movie.sources WHERE movie_id = " + select + " ORDER BY sc_episode";
         List<Sources> lst = new ArrayList<>();
         try (Connection con = DbUtil.getConnection();
                 Statement stm = con.createStatement();
@@ -24,6 +24,7 @@ public class SourcesDAL {
         }
         return lst;
     }
+
     private Sources getSource(final ResultSet rSet) throws SQLException {
         Sources sou = new Sources();
         sou.setSourceID(rSet.getInt("sc_id"));

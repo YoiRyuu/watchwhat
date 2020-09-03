@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.Scanner;
 
 import vtc.Utils.Constants;
-import vtc.Utils.UILayer;
 import vtc.Persistance.User;
+import vtc.UI.ManageMemberUI;
 
 public class UserDAL {
     static Scanner sc = new Scanner(System.in);
@@ -62,7 +62,6 @@ public class UserDAL {
             callableStatement.execute();
             System.out.println(Constants.RegisterSuccess);
         } catch (Exception e) {
-            e.printStackTrace();
             System.out.println(Constants.RegisterFailed);
         }
     }
@@ -100,7 +99,7 @@ public class UserDAL {
         String sql = "{CALL searchmember_byname(?)}";
         CallableStatement call = DbUtil.getConnection().prepareCall(sql);
         call.setString(1, name);
-        UILayer.show_mem_byname(call);
+        ManageMemberUI.show_mem_byname(call);
     }
 
     public static void update_byid(int id, String name, String email, Date bd, int stt, int lvl) throws SQLException {
