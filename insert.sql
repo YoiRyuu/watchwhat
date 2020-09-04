@@ -318,3 +318,5 @@ INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.5', 'Add:\n- Thêm c
 INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.6', 'Add:\n- Thêm chức năng quản lý thành viên cho tài khoản admin\nFix:\n- Sửa một số lỗi tồn đọng từ các phiên bản trước\nOptimal\n- Chỉnh lại giao diện chính và phụ cho đồng bộ');
 INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.7', 'Fix:\n- Sửa lại giao diện chức năng request cho member và quản lý request cho admin\n- Sắp xếp lại Code lại theo Layer\n- Sắp xếp lại Code để dễ theo dõi sau này\n- Sửa lại một chút về thanh hiển thị thông tin khi đăng nhập thành công\n- Sửa một số lỗi còn tồn đọng ở bản trước\nAdd:\n- Thêm dòng hiển thị tên giao diện đang được sử dụng');
 INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.8', 'Add:\n- Thêm chức năng Danh sách phim yêu thích\nFix:\n- Sửa lại UI ra thành từng phần để dễ quản lý\n- Sửa lại một số chỗ UI cho thuận mắt\n- Sửa một số lỗi');
+INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.9', 'Fix:\n- Sửa việc Danh sách phim yêu thích trả về kết quả trùng lặp');
+

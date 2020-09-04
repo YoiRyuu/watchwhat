@@ -146,7 +146,7 @@ delimiter ;
 delimiter //
 CREATE PROCEDURE listfavourite(IN cus_id int)
 BEGIN
-	SELECT a.movie_id, b.movie_name,b.movie_directors,b.movie_year,b.movie_premiereDay,b.movie_coverImage,b.movie_Certificate
+	SELECT DISTINCT a.movie_id, b.movie_name,b.movie_directors,b.movie_year,b.movie_premiereDay,b.movie_coverImage,b.movie_Certificate
 	FROM listoffvorites AS a INNER JOIN movie AS b ON a.movie_id = b.movie_id
 	WHERE a.ctm_id = cus_id AND a.stt = 1;
 END //

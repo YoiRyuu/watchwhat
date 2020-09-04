@@ -15,7 +15,7 @@ public class Constants {
     public static String user_temp;
     public static String pass_temp;
     public static int inbox_temp = 0;
-    public static String ver = "0.4.8";
+    public static String ver = "0.4.9";
     public static String notepatch;
     public static int idmov_temp;
 
@@ -76,6 +76,7 @@ public class Constants {
     public static String buttonsearchmovnation  = "| [2] Search movie by nation                 |";
     public static String buttonSelect           = "  [S] Select ID movie to get link";
     public static String buttonRemove           = "  [R] Remove movie from list";
+    public static String buttonBack             = "  [B] Back";
     
     // Warning
     public static String pleasechoiceInt    = "  Input a number to choose    : ";
@@ -138,7 +139,7 @@ public class Constants {
     public static String changenamemov  = "  [~] Change Name      : ";
     public static String changedirmov   = "  [~] Change Director  : ";
     public static String changeyearmov  = "  [~] Change Year      : ";
-    public static String changeurlmov   = "  [~] Change URL       : ";
+    public static String changeurlmov   = "  [~] Change URL Cover : ";
     public static String update_mov     = "  [?] Do you want movie's infomation update (Y/N): ";
     
     // infor app

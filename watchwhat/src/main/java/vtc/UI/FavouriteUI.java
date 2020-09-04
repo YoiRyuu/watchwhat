@@ -25,12 +25,10 @@ public class FavouriteUI {
     }
 
     public static void favourite_update(int ctm) throws SQLException {
-        HeaderUI.headerUI();
-        HeaderUI.login_success();
-        out.print("| [>] Remove ID movie: ");
+        out.print("  [>] Remove ID movie: ");
         int mov = new Process().check_number_empty();
         FavouriteBL.removefavourite(ctm, mov);
-        System.out.println(Constants.Continue);
+        System.out.print(Constants.Continue);
         sc.nextLine();
     }
 
@@ -47,33 +45,45 @@ public class FavouriteUI {
         out.println("  [!] " + count + " movie(s) to found");
         System.out.println(Constants.Decorate8);
         if (count > 0) {
-            System.out.println(Constants.buttonSelect);
-            System.out.println(Constants.buttonRemove);
-            System.out.print(Constants.pleasechoiceString);
-            String key = new Process().check_string_empty();
-            switch (key) {
-                case "S":
-                case "s":
-                    System.out.print(Constants.mov_select);
-                    int select = new Process().check_number_empty();
-                    List<Sources> lst2 = new SourcesBL().getLinkMovies(select);
-                    for (Sources sources : lst2) {
-                        System.out.println(sources);
-                    }
-                    if (lst2.size() == 0) {
-                        System.out.println(Constants.noepisode);
-                    }
-                    if (Constants.lvl_temp > 1) {
-                        MovieBL.update_mov_info(select);
-                    }
-                    break;
-                case "R":
-                case "r":
-                    favourite_update(Constants.id_temp);
-                    break;
-                default:
-                    System.out.println(Constants.WrongSelect);
-                    break;
+            boolean a = true;
+            while (a) {
+                System.out.println(Constants.buttonSelect);
+                System.out.println(Constants.buttonRemove);
+                System.out.println(Constants.buttonBack);
+                System.out.print(Constants.pleasechoiceString);
+                String key = new Process().check_string_empty();
+                switch (key) {
+                    case "S":
+                    case "s":
+                        System.out.print(Constants.mov_select);
+                        int select = new Process().check_number_empty();
+                        List<Sources> lst2 = new SourcesBL().getLinkMovies(select);
+                        for (Sources sources : lst2) {
+                            System.out.println(sources);
+                        }
+                        if (lst2.size() == 0) {
+                            System.out.println(Constants.noepisode);
+                        }
+                        if (Constants.lvl_temp > 1) {
+                            MovieBL.update_mov_info(select);
+                        }
+                        System.out.print(Constants.Continue);
+                        sc.nextLine();
+                        a = false;
+                        break;
+                    case "R":
+                    case "r":
+                        favourite_update(Constants.id_temp);
+                        a = false;
+                        break;
+                    case "b":
+                    case "B":
+                        a = false;
+                        break;
+                    default:
+                        System.out.println(Constants.WrongSelect);
+                        break;
+                }
             }
         } else {
             System.out.print(Constants.Continue);
@@ -82,7 +92,7 @@ public class FavouriteUI {
     }
 
     public static void addFavourite(int movieID) throws SQLException {
-        System.out.println("Add to Favourite? (Y/N): ");
+        System.out.print("  Add to Favourite? (Y/N): ");
         int ys = new Process().Yes_No_int();
         if (ys == 0) {
             FavouriteBL.addfavourite(Constants.id_temp, movieID);
