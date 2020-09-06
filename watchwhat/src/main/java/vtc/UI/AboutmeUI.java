@@ -22,6 +22,9 @@ public class AboutmeUI {
         out.println(Constants.aboutme4);
         out.println(Constants.aboutme5);
         out.println(Constants.Decorate2);
+        out.println(Constants.aboutme6);
+        out.println(Constants.aboutme7);
+        out.println(Constants.Decorate2);
         Aboutme.getAbout();
         out.println(Constants.Decorate2);
         out.print(Constants.Continue);

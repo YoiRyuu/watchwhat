@@ -46,10 +46,11 @@ public class UserBL {
                 switch (user.getUserlvl()) {
                     case 1:
                         Constants.namelever = "Role: Member";
+                        RequestDAL.getInbox(Constants.id_temp);
                         break;
                     case 2:
                         Constants.namelever = "Role: Admin ";
-                        RequestDAL.getInbox();
+                        RequestDAL.getInboxAdmin();
                         break;
                     default:
                         break;
@@ -57,9 +58,16 @@ public class UserBL {
             }
         }
         if (n > 0) {
-            // Chay UI cua member
-            LoginUI.memberloginUI_success();
-            return 1;
+            if (Constants.stt_temp == 1) {
+                // Chay UI cua member
+                LoginUI.memberloginUI_success();
+                return 1;
+            } else {
+                System.out.print("Tai khoan bi khoa, neu co gi thac mac vui long lien he admin");
+                sc.nextLine();
+                return 1;
+            }
+
         } else {
             System.out.println(Constants.LoginFailed);
             System.out.print(Constants.Again);

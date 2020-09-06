@@ -10,6 +10,8 @@ public class Movie {
     private Date moviePREDATE;
     private String movieCOVER;
     private String movieCERTIFICATE;
+    private Double movieRate;
+    private String movieDescrip;
 
     // movie ID
     public void setMovieID(int movieid) {
@@ -72,6 +74,21 @@ public class Movie {
 
     public String getmovieCERTIFICATE() {
         return movieCERTIFICATE;
+    }
+
+    // movie rate
+    public void setmovieRate(Double rate) {
+        this.movieRate=rate;
+    }
+    public Double getmovieRate() {
+        return movieRate;
+    }
+    // movie description
+    public void setmovieDescription(String Descrip) {
+        this.movieDescrip = Descrip;
+    }
+    public String getmovieDescription() {
+        return movieDescrip;
     }
 
     @Override

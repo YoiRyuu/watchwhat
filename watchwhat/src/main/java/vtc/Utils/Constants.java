@@ -15,7 +15,7 @@ public class Constants {
     public static String user_temp;
     public static String pass_temp;
     public static int inbox_temp = 0;
-    public static String ver = "0.4.9";
+    public static String ver = "0.5.0";
     public static String notepatch;
     public static int idmov_temp;
 
@@ -24,7 +24,8 @@ public class Constants {
     public static String Decorate1  = "----------------------------------------";
     public static String Decorate2  = "+--------------------------------------------+";
     public static String Decorate3  = "+--------------------------------------------+--------------------------------------------+";
-    public static String Decorate4  = "+------------+---------------------------------------------+------------------------------+----------+------------------------------------------------------------------------+";
+    // public static String Decorate4  = "+------------+---------------------------------------------+------------------------------+----------+------------------------------------------------------------------------+";
+    public static String Decorate4  = "+------------+---------------------------------------------+------------------------------+----------+";
     public static String Decorate5  = "+-------+--------------------------------+----------------------------------------------------+-------------+-------------+------------+--------+--------------------------------+";
     public static String Decorate6  = "+----------------------------------------------------------+--------------------------------------------------+";
     public static String Decorate7  = "+----------------------------------------------------+------------+----------------------------------------------------+";
@@ -36,20 +37,29 @@ public class Constants {
     public static String Welcome1               = "|    Welcome to WatchWhat application!       |";
     public static String Welcome2               = "|    PF10 - Group 4 - Author: Long & Loi     |";
     public static String showver                = "|          [ Version " + Constants.ver + " ]                 |";
-    public static String headmov1               = "[   - ID -   |              - Movie's Name -               |         - Director -         | - Year - |                       - Image Cover -                                  ]";
+    public static String headmov1               = "[   - ID -   |              - Movie's Name -               |         - Director -         | - Year - |";
     public static String logString              = "Welcome, ";
+    // movie information
+    public static String info1String            = "Cover";
+    public static String info2String            = "Infomation";
+    public static String info3String            = "Year: ";
+    public static String info4String            = "Predate: ";
+    public static String info5String            = "Rate: ";
+    public static String info6String            = "Director(s): ";
+    public static String info7String            = "Certificate: ";
+    
     // Name UI
     public static String UIwelcome              = "|                 MAIN MENU                  |";
-    public static String UIregister             = "| [UI]  New Register become to member        |";
-    public static String UIlogin                = "| [UI]  Login into application               |";
-    public static String UImenu                 = "| [UI]  Menu                                 |";
-    public static String UIprofile              = "| [UI]  Profile                              |";
-    public static String UIviewprofile          = "| [UI]  View Profile                         |";
-    public static String UIupdateprofile        = "| [UI]  Update Profile                       |";
-    public static String UIchangepassword       = "| [UI]  Change password                      |";
-    public static String UImovie                = "| [UI]  Movie                                |";
-    public static String UIrequest              = "| [UI]  Request                              |";
-    public static String UImanagemember         = "| [UI]  Manage member                        |";
+    public static String UIregister             = "|     New Register                           |";
+    public static String UIlogin                = "|     Login into application                 |";
+    public static String UImenu                 = "|     Menu                                   |";
+    public static String UIprofile              = "|     Profile                                |";
+    public static String UIviewprofile          = "|     View Profile                           |";
+    public static String UIupdateprofile        = "|     Update Profile                         |";
+    public static String UIchangepassword       = "|     Change password                        |";
+    public static String UImovie                = "|     Movie                                  |";
+    public static String UIrequest              = "|     Request                                |";
+    public static String UImanagemember         = "|     Manage member                          |";
 
     /* Button */
     public static String buttonback             = "| [0] Back                                   |";
@@ -125,7 +135,7 @@ public class Constants {
     // Search
     public static String mov_name       = "  [>] Movie's name: ";
     public static String mov_nation     = "  [>] ID Nation: ";
-    public static String mov_select     = "  [>] Input ID movie to get link: ";
+    public static String mov_select     = "  [>] Choice ID movie: ";
     public static String numbermov      = "  [!] Movie had found: ";
     public static String noname         = "  [x] Movie not found ";
     public static String noepisode      = "  [x] Movie's episode not have ";
@@ -148,6 +158,9 @@ public class Constants {
     public static String aboutme3 = "| Creator: Phan Gia Long & Tran Dai Loi      |";
     public static String aboutme4 = "| Intructor: Vu Tran Lam                     |";
     public static String aboutme5 = "| Code by Java, 2020                         |";
+    public static String aboutme6 = "| If you find bug, please contact            |";
+    public static String aboutme7 = "| Email: longpg.nde19090@vtc.edu.vn          |";
+
 
     //View profile
     public static String profileinfo1   = "| My ID, yeah I am only one                  | ";

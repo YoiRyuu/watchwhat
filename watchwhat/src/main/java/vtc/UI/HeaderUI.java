@@ -21,15 +21,11 @@ public class HeaderUI {
     }
 
     public static void login_success() {
-        out.printf("| " + Constants.logString + "[ %-29s ] |", Constants.name_temp);
-        out.println();
+        String inbox = "[ New Inbox:   " + Constants.inbox_temp + " ]";
+        out.printf("[ " + Constants.logString + "%-33s ]\n", Constants.name_temp);
         out.println(Constants.Decorate2);
         out.print("| [ " + Constants.namelever + " ]    ");
-        if (Constants.lvl_temp == 1) {
-            System.out.println("                       |");
-        } else {
-            System.out.println("   [ New request: " + Constants.inbox_temp + " ]  |");
-        }
+        System.out.printf("%-22s |\n", inbox);
         out.println(Constants.Decorate2);
     }
 }

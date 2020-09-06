@@ -18,7 +18,7 @@ public class UserDAL {
     static Scanner sc = new Scanner(System.in);
     static String username = null;
     static String password = null;
-    static String sql = "SELECT * FROM csdl_movie.customer";
+    static String sql = "SELECT * FROM csdl_movie.customers";
     static String callStoreProcedure = null;
     static CallableStatement callableStatement = null;
 

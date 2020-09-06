@@ -28,12 +28,12 @@ public class MovieBL {
 
     public static void searchMovieName(String movname) throws SQLException {
         List<Movie> lst = new MovieBL().getNameMovies(movname);
-        MovieUI.show_mov_list(lst);
+        MovieUI.show_mov(lst);
     }
 
     public static void searchMovieNation(int id) throws SQLException {
         List<Movie> lst2 = new MovieBL().getNationMovies(id);
-        MovieUI.show_mov_list(lst2);
+        MovieUI.show_mov(lst2);
     }
 
     // For Admin

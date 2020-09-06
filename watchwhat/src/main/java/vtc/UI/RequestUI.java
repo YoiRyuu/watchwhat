@@ -109,7 +109,7 @@ public class RequestUI {
         out.println(Constants.Decorate1);
         out.println("Request sent");
         out.println(Constants.Decorate1);
-        out.printf("| %-30s | %-10s | %-30s | %-15s |\n", "Name", "User ID", "Request", "Process");
+        out.printf("| %-30s | %-10s | %-30s |\n", "Name", "User ID", "Request");
         out.println(Constants.Decorate1);
         RequestBL.SeeReqUI2();
         out.println(Constants.Decorate1);
@@ -118,7 +118,7 @@ public class RequestUI {
     }
 
     public static void ContentMail(String name, String request, int id, String xuly) {
-        out.printf("| %-30s | %-10s | %-30s | %-15s |\n", name, id, request, xuly);
+        out.printf("| %-30s | %-10s | %-15s | %-50s |\n", name, id, xuly, request);
     }
 
     public static void ReplyUI() throws SQLException {
@@ -138,7 +138,7 @@ public class RequestUI {
     }
 
     public static void ContentMail2(int id, String request, int UserID) {
-        out.printf("[ Id_req: %-5s ] [ %-50s ] [ User ID: %-5s]\n", id, request, UserID);
+        out.printf("[ Id_req: %-5s ] [ %-100s ] [ User ID: %-5s]\n", id, request, UserID);
     }
 
 }

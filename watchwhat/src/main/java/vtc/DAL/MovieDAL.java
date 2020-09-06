@@ -67,6 +67,8 @@ public class MovieDAL {
         mov.setmoviePREDATE(rSet.getDate("movie_premiereDay"));
         mov.setmovieCOVER(rSet.getString("movie_coverImage"));
         mov.setmovieCERTIFICATE(rSet.getString("movie_Certificate"));
+        mov.setmovieRate(rSet.getDouble("movie_Rate"));
+        mov.setmovieDescription(rSet.getString("movie_Description"));
         return mov;
     }
 

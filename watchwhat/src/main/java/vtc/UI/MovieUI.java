@@ -17,6 +17,7 @@ import vtc.Utils.Process;
 
 public class MovieUI {
     static Scanner sc = new Scanner(System.in);
+
     // Use case Search & View Movie
     public static void movieUI() throws SQLException {
         boolean is_continue = true;
@@ -71,38 +72,56 @@ public class MovieUI {
         sc.nextLine();
     }
 
-    public static void show_mov_info(Movie mov) {
+    public static void show_mov_list(Movie mov) {
         String a = "" + mov.getMovieID();
         String b = mov.getMovieNAME();
         String c = mov.getMovieDIC();
         String d = "" + mov.getMovieYEAR();
-        String e = mov.getmovieCOVER();
-        out.printf("[ %-10s | %-43s | %-28s | %-8s | %-70s ]\n", a, b, c, d, e);
+        out.printf("[ %-10s | %-43s | %-28s | %-8s ]\n", a, b, c, d);
         out.println(Constants.Decorate4);
     }
 
-    public static void show_mov_list(List<Movie> lst) throws SQLException {
+    public static void show_mov_info(List<Movie> lst, int id) {
+        for (Movie mov : lst) {
+            if (id == mov.getMovieID()) {
+                Paragraph.DecorateLine(135);
+                out.printf("[ %-30s | %-100s ]\n", Constants.info1String, Constants.info2String);
+                out.printf("[ %-30s | %-100s ]\n", mov.getmovieCOVER(), mov.getMovieNAME());
+                out.printf("[ %-30s | %-100s ]\n", "", Constants.info3String + mov.getMovieYEAR());
+                out.printf("[ %-30s | %-100s ]\n", "", Constants.info4String + mov.getmoviePREDATE());
+                out.printf("[ %-30s | %-100s ]\n", "", Constants.info5String + mov.getmovieRate());
+                out.printf("[ %-30s | %-100s ]\n", "", Constants.info6String + mov.getMovieDIC());
+                out.printf("[ %-30s | %-100s ]\n", "", Constants.info7String + mov.getmovieCERTIFICATE());
+                Paragraph.DecorateLine(135);
+                out.printf("[ %-133s ]\n", "Description");
+                out.printf("[ %-133s ]\n", mov.getmovieDescription());
+            }
+        }
+    }
+
+    public static void show_mov(List<Movie> lst) throws SQLException {
         int n = 0;
         out.println(Constants.Decorate4);
         out.println(Constants.headmov1);
         out.println(Constants.Decorate4);
         for (Movie mov : lst) {
-            show_mov_info(mov);
+            show_mov_list(mov);
             n++;
         }
         if (n > 0) {
             out.println(Constants.numbermov + n);
             out.print(Constants.mov_select);
             int select = new Process().check_number_empty();
+            show_mov_info(lst, select);
             List<Sources> lst2 = new SourcesBL().getLinkMovies(select);
-            Process.DecorateLine(173);
+            Paragraph.DecorateLine(135);
             for (Sources sources : lst2) {
-                out.println(sources);
-                Process.DecorateLine(173);
+                out.printf("[ %-30s | %-100s ]\n", "", sources);
+                Paragraph.DecorateLine(135);
             }
             if (lst2.size() == 0) {
                 out.println(Constants.noepisode);
-                Process.DecorateLine(173);
+                Paragraph.DecorateLine(135);
             }
             FavouriteUI.addFavourite(select);
             if (Constants.lvl_temp > 1) {
@@ -111,7 +130,7 @@ public class MovieUI {
         }
         if (n == 0) {
             out.println(Constants.noname);
-            Process.DecorateLine(173);
+            Paragraph.DecorateLine(135);
         }
     }
 

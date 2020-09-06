@@ -12,13 +12,13 @@ import vtc.Persistance.Nation;
 public class NationDAL {
     private Nation getNation(final ResultSet rSet) throws SQLException {
         Nation nat = new Nation();
-        nat.setNationID(rSet.getInt("contry_id"));
-        nat.setNationNAME(rSet.getString("contry_name"));
+        nat.setNationID(rSet.getInt("nation_id"));
+        nat.setNationNAME(rSet.getString("nation_name"));
         return nat;
     }
 
     public List<Nation> showNation() {
-        String sql = "SELECT * FROM csdl_movie.contry";
+        String sql = "SELECT * FROM csdl_movie.nations";
         List<Nation> lst = new ArrayList<>();
         try (Connection con = DbUtil.getConnection();
                 Statement stm = con.createStatement();

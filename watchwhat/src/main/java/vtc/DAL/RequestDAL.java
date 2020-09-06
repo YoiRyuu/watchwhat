@@ -15,7 +15,7 @@ import vtc.Utils.Constants;
 
 public class RequestDAL {
     static Scanner sc = new Scanner(System.in);
-    static String sql = "SELECT * FROM csdl_movie.reques";
+    static String sql = "SELECT * FROM csdl_movie.request";
     static CallableStatement callableStatement = null;
     static String callStoreProcedure = null;
     static String xuly = null;
@@ -39,20 +39,19 @@ public class RequestDAL {
         Request request = new Request();
         request.setReqID(rs.getInt("req_id"));
         request.setReqContent(rs.getString("req_content"));
-        request.setReqStatus(rs.getInt("req_status"));
+        request.setReqStatus(rs.getInt("req_stt_send"));
         request.setUserID(rs.getInt("userID"));
-        request.setReqASN(rs.getString("ANS"));
+        request.setReqASN(rs.getString("req_answer"));
         return request;
     }
 
     // user send request
     public static void sentRequest_User(String contentOfUser, int userID) {
-        callStoreProcedure = "call sendrequest(?,?,?)";
+        callStoreProcedure = "call sendrequest(?,?)";
 
         try (CallableStatement callableStatement = DbUtil.getConnection().prepareCall(callStoreProcedure)) {
             callableStatement.setString(1, contentOfUser);
-            callableStatement.setInt(2, 1);
-            callableStatement.setInt(3, userID);
+            callableStatement.setInt(2, userID);
             callableStatement.execute();
             System.out.println(Constants.sendRequstUser);
         } catch (Exception e) {
@@ -74,16 +73,42 @@ public class RequestDAL {
     }
 
     public static void sent_User() throws SQLException {
-        String sql1 = "SELECT req_content, req_status, ctm_id, ans FROM csdl_movie.reques WHERE ctm_id = ";
+        String sql1 = "SELECT req_content, req_stt_send, ctm_id, req_answer, req_id FROM csdl_movie.request WHERE ctm_id = ";
         Statement statement = DbUtil.getConnection().createStatement();
         ResultSet rs = statement.executeQuery(sql1 + Constants.id_temp);
         while (rs.next()) {
-            if (rs.getInt(2) == 1) {
-                xuly = "Processing";
-            } else {
-                xuly = "No process";
+            switch (rs.getInt(2)) {
+                case 0:
+                    xuly = "Sent";
+                    break;
+                case 1:
+                    xuly = "Seen";
+                    break;
+                case 2:
+                    xuly = "Replied";
+                    break;
+                case 3:
+                    xuly = "Old";
+                    break;
+                default:
+                    break;
             }
             RequestUI.ShowContentRequest(rs.getString(1), xuly, rs.getString(4));
+            if (rs.getInt(2) == 2) {
+                stt_mail(rs.getInt("req_id"), 3);
+                getInbox(Constants.id_temp);
+            }
+        }
+    }
+
+    public static void stt_mail(int id, int stt) throws SQLException {
+        String sql = "{CALL updatemail(?,?)}";
+        try (CallableStatement call = DbUtil.getConnection().prepareCall(sql)) {
+            call.setInt(1, id);
+            call.setInt(2, stt);
+            call.execute();
+        } catch (Exception e) {
+            // TODO: handle exception
         }
     }
 
@@ -92,25 +117,37 @@ public class RequestDAL {
         String sql2 = "SELECT * FROM bangrequest";
         Statement stmt = DbUtil.getConnection().createStatement();
         ResultSet rs = stmt.executeQuery(sql2);
-        int n = 0;
         String xuly;
         while (rs.next()) {
-            if (rs.getInt(4) == 1) {
-                n++;
-                xuly = "Processing";
+            if (rs.getInt(4) == 0) {
+                xuly = "New";
                 RequestUI.ContentMail(rs.getString(1), rs.getString(2), rs.getInt(3), xuly);
+                stt_mail(rs.getInt("req_id"), 1);
+            }
+        }
+        Constants.inbox_temp = 0;
+    }
+
+    public static void getInbox(int id) throws SQLException {
+        String sql2 = "SELECT * FROM request WHERE ctm_id =" + id;
+        Statement stmt = DbUtil.getConnection().createStatement();
+        ResultSet rs = stmt.executeQuery(sql2);
+        int n = 0;
+        while (rs.next()) {
+            if (rs.getInt("req_stt_send") == 2) {
+                n++;
             }
         }
         Constants.inbox_temp = n;
     }
 
-    public static void getInbox() throws SQLException {
+    public static void getInboxAdmin() throws SQLException {
         String sql2 = "SELECT * FROM bangrequest";
         Statement stmt = DbUtil.getConnection().createStatement();
         ResultSet rs = stmt.executeQuery(sql2);
         int n = 0;
         while (rs.next()) {
-            if (rs.getInt(4) == 1) {
+            if (rs.getInt("req_stt_send") == 0) {
                 n++;
             }
         }
@@ -118,12 +155,12 @@ public class RequestDAL {
     }
 
     public static void ListReqNoReply() throws SQLException {
-        String sql = "SELECT * FROM csdl_movie.reques";
+        String sql = "SELECT * FROM csdl_movie.request";
         Statement stmt = DbUtil.getConnection().createStatement();
         ResultSet rs = stmt.executeQuery(sql);
         while (rs.next()) {
-            if (rs.getInt(3) == 1) {
-                RequestUI.ContentMail2(rs.getInt(1), rs.getString(2), rs.getInt(4));
+            if (rs.getInt(3) == 0 || rs.getInt(3) == 1) {
+                RequestUI.ContentMail2(rs.getInt(1), rs.getString(2), rs.getInt("ctm_id"));
             }
         }
     }

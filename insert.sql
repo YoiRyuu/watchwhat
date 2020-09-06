@@ -1,62 +1,54 @@
 use csdl_movie;
 
 -- insert customer
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('1', 'Phan Gia Long', 'phagialong@gmail.com', '1994-12-12', '1', '2', 'admin1', 'long1234');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('2', 'Trần Đại Lợi', 'tranloi14022001@gmail.com', '2001-02-14', '1', '2', 'admin2', 'loi1402');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('3', 'Nguyễn Minh Hải', 'hainguyen@gmail.com', '2001-02-12', '1', '1', 'nguyenhai1221', 'haipro123');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('4', 'Ngyễn Thị Hương', 'huongnguyen@gmail.com', '2001-04-16', '1', '1', 'nguyenhuong1504', 'huong1502');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('5', 'Trần Trung Năm', 'namtran@gmail.com', '2', '1', 'trannam11223', '1234abcd');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('6', 'Lê Thịn Hoài Anh', 'hoaianh1102', '1999-03-11', '1', '1', 'hoaianh1102', '123456asd');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('7', 'Vũ Trần Kim Trâm', 'kimtran270289', '1989-02-27', '1', '1', 'kimtram270289', 'qaz1234');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('8', 'Phan Văn Hoàng', 'hoang101996', '1996-10-10', '1', '1', 'phanvanhoang12', '12345678');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('10', 'Hoàng Thị Yến', 'hoangyenna@gmail.com', '2003-05-12', '1', '1', 'yenhanggg', '12345678');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('11', 'Vũ Thị Thùy Dung', 'thuydung@gmail.com', '2001-05-12', '1', '1', 'thuydunggg', '12345678');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('12', 'Lưu Đức Hải', 'hailuu123asd@gmail.com', '2001-12-12', '1', '1', 'hailuuu12', '12345678');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('13', 'Nguyễn Văn Kiên', 'kiennguyen@gmail.com', '1', '1', 'kiennguyen123', '12345678');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('14', 'Trần Thị Thu Trang', 'trantttrang@gmail.com', '1999-12-06', '1', '1', 'thutrang1234', '12345678');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('15', 'Tạ Văn Đồng', 'tavadong@gmail.com', '1', '1', 'dongg112323', '12345678');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('16', 'Nguyễn Viết Quân', 'quannguyen@gmail.com', '2001-05-03', '1', '1', 'vietquan', '12345678');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('17', 'Tạ Hồng Nhung', 'hongnhung@gmail.com', '2000-12-23', '1', '1', 'hongnhunh', '12345678');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('18', 'Hoàng Thị Thúy', 'haongthithuy112@gmail.com', '1', '1', 'hoangthithuy', '12345678');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('19', 'Nguyễn Hải Anh', 'haianh1123@gmail.com', '1997-12-21', '1', '1', 'haianhhh', '12345678');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('20', 'Vũ Thị Quỳnh Trang', 'quynhtrang1178@gmail.com', '1997-07-13', '1', '1', 'quynhtranhh1', '12345678');
-INSERT INTO `csdl_movie`.`customer` (`ctm_id`, `ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_status`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('21', 'Hoàng Ngọc Anh', 'ngocanhh2302@gmail.com', '2002-03-12', '1', '1', 'ngocanhhh1221', '12345678');
-
-
-
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('Phan Gia Long', 'phagialong@gmail.com', '1994-12-12', 2, 'admin1', 'long1234');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_lever`, `ctm_account`, `ctm_pass`) VALUES ('Trần Đại Lợi', 'tranloi14022001@gmail.com', '2001-02-14', 2, 'admin2', 'loi1402');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_account`, `ctm_pass`) VALUES ('Nguyễn Minh Hải', 'hainguyen@gmail.com', '2001-02-12', 'nguyenhai1221', 'haipro123');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_account`, `ctm_pass`) VALUES ('Ngyễn Thị Hương', 'huongnguyen@gmail.com', '2001-04-16', 'nguyenhuong1504', 'huong1502');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_account`, `ctm_pass`) VALUES ('Lê Thịn Hoài Anh', 'hoaianh1102', '1999-03-11', 'hoaianh1102', '123456asd');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_account`, `ctm_pass`) VALUES ('Vũ Trần Kim Trâm', 'kimtran270289', '1989-02-27', 'kimtram270289', 'qaz1234');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_account`, `ctm_pass`) VALUES ('Phan Văn Hoàng', 'hoang101996', '1996-10-10', 'phanvanhoang12', '12345678');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_account`, `ctm_pass`) VALUES ('Hoàng Thị Yến', 'hoangyenna@gmail.com', '2003-05-12', 'yenhanggg', '12345678');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_account`, `ctm_pass`) VALUES ('Vũ Thị Thùy Dung', 'thuydung@gmail.com', '2001-05-12', 'thuydunggg', '12345678');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_account`, `ctm_pass`) VALUES ('Lưu Đức Hải', 'hailuu123asd@gmail.com', '2001-12-12', 'hailuuu12', '12345678');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_account`, `ctm_pass`) VALUES ('Trần Thị Thu Trang', 'trantttrang@gmail.com', '1999-12-06', 'thutrang1234', '12345678');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_account`, `ctm_pass`) VALUES ('Nguyễn Viết Quân', 'quannguyen@gmail.com', '2001-05-03', 'vietquan', '12345678');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_account`, `ctm_pass`) VALUES ('Tạ Hồng Nhung', 'hongnhung@gmail.com', '2000-12-23', 'hongnhunh', '12345678');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_account`, `ctm_pass`) VALUES ('Nguyễn Hải Anh', 'haianh1123@gmail.com', '1997-12-21', 'haianhhh', '12345678');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_account`, `ctm_pass`) VALUES ('Vũ Thị Quỳnh Trang', 'quynhtrang1178@gmail.com', '1997-07-13', 'quynhtranhh1', '12345678');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_brithday`, `ctm_account`, `ctm_pass`) VALUES ('Hoàng Ngọc Anh', 'ngocanhh2302@gmail.com', '2002-03-12', 'ngocanhhh1221', '12345678');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_status`, `ctm_account`, `ctm_pass`) VALUES ('Trần Trung Năm', 'namtran@gmail.com', '0', 'trannam11223', '1234abcd');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_status`, `ctm_account`, `ctm_pass`) VALUES ('Nguyễn Văn Kiên', 'kiennguyen@gmail.com','0', 'kiennguyen123', '12345678');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_status`, `ctm_account`, `ctm_pass`) VALUES ('Tạ Văn Đồng', 'tavadong@gmail.com', '0', 'dongg112323', '12345678');
+INSERT INTO `csdl_movie`.`customers` (`ctm_name`, `ctm_email`, `ctm_status`, `ctm_account`, `ctm_pass`) VALUES ('Hoàng Thị Thúy', 'haongthithuy112@gmail.com', '0', 'hoangthithuy', '12345678');
 
 -- insert movie
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('1', 'TIỆC TRĂNG MÁU', 'Nguyễn Quang Dũng', '2018', '2020-08-28', 'https://galaxycine.vn/media/2020/6/22/ttm-teaser-poster_1592795414419.jpg', '');
-UPDATE `csdl_movie`.`movie` SET `movie_Certificate` = 'chua cong chieu' WHERE (`movie_id` = '1');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('2', 'LƯU LY', 'Doãn Đào', '2020', 'http://image.phimmoizz.net/film/11307/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('3', 'ĐẶC VỤ NGẦM', 'Adrian Bol', '2020', '2020-07-28', 'http://image.phimmoizz.net/film/11287/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('4', 'ĐẠI HIỆP KHÁCH NGYÊN GIÁP', 'Bách Sam', '2020', 'http://image.phimmoizz.net/film/11274/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('5', 'BORUTO: NAROTO THẾ HỆ KẾ TIẾP', '2017', '2017-04-05', 'http://image.phimmoizz.net/film/4997/poster.medium.jpg', 'da cong chieu');
-
-ALTER TABLE `csdl_movie`.`movie` 
-DROP COLUMN `movie_cast`;
-
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('6', 'ĐÓA HOA ÁC MA', 'Kim Cheol-Kyu', '2020', '2020-07-27', 'http://image.phimmoizz.net/film/11176/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('7', 'CĂN PHÒNG ĐẪM MÁU', 'Yoon Een-Kyoung', '2020', '2020-04-29', 'http://image.phimmoizz.net/film/11282/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('8', 'NA TRA HÀN YÊU KÝ', 'Cao Tiến Minh', '2020', 'http://image.phimmoizz.net/film/11110/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('9', 'THỜI KỲ PHIẾN LOẠN', 'Hong-sun Kim', '2017', '2017-11-14', 'http://image.phimmoizz.net/film/11331/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('10', 'ĐẠO MỘ BÚT KÝ 3: TRÙNG KHỞI', '2020', '2020-07-15', 'http://image.phimmoizz.net/film/9152/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('11', 'DÂN GIAN KỲ DỊCH CHÍ', '2020', 'http://image.phimmoizz.net/film/10945/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('12', 'QUYẾT  KHÔNG KHUẤT PHỤC', 'Chu Hiển Dương', '2020', 'http://image.phimmoizz.net/film/11197/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('13', 'THÀNH TROY SỤP ĐỔ (PHẦN 1)', 'David Farr', '2018', '2018-02-17', 'http://image.phimmoizz.net/film/11327/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('14', 'HÀN LONG ĐẠI SƯ: TRÓC YÊU BẢNG', '2020', 'http://image.phimmoizz.net/film/11068/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('15', 'CHIẾC LA BÀN VÀNG', 'Chris Weitz', '2007', '2017-12-05', 'http://image.phimmoizz.net/film/6185/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('16', 'HÀ THẦN 2', 'Điền Lý', '2020', '2020-07-06', 'http://image.phimmoizz.net/film/8994/poster.medium.jpg', 'da cong chiue');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('17', 'NGƯỜI SẮT 3', 'Shane Black', '2013', '2013-04-24', 'http://image.phimmoizz.net/film/2/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('18', 'NGƯỜI NHỆN: VỀ NHÀ', 'Jon Watts', '2017', '2017-07-07', 'http://image.phimmoizz.net/film/4640/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('19', 'ĐẠI CHIẾN THÁI BÌNH DƯƠNG', 'Guillermo Del Toro', '2013', '2013-07-11', 'http://image.phimmoizz.net/film/1/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('20', '12 CON GIÁP', 'Thành Long', '2013', 'http://image.phimmoizz.net/film/3/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('21', 'CAPTAIN AMERICA 3: NỘI CHIẾN SIÊU ANH HÙNG', '2016', '2016-04-27', 'http://image.phimmoizz.net/film/3086/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('22', 'POKEMON (PHẦN 2)', 'Kunihiko Yuyama', '1997', '1997-04-01', 'http://image.phimmoizz.net/film/2504/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('23', 'ĐẢO HẢI TẶC', 'Eiichiro Oda', '1999', 'http://image.phimmoizz.net/film/665/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('24', 'CẨM TÚ NAM CA', 'Lý Tuệ Châu', '2020', 'http://image.phimmoizz.net/film/11166/poster.medium.jpg', 'da cong chieu');
-INSERT INTO `csdl_movie`.`movie` (`movie_id`, `movie_name`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('25', 'ĐẠI ĐƯỜNG VINH NHUỆ', '2017', 'http://image.phimmoizz.net/film/5125/poster.medium.jpg', 'da cong chieu');
-UPDATE `csdl_movie`.`movie` SET `movie_name` = 'GÃ HỀ', `movie_directors` = 'Todd Phillips', `movie_year` = '2019', `movie_premiereDay` = '2019-10-01', `movie_coverImage` = 'http://image.phimmoizz.net/film/8592/poster.medium.jpg', `movie_Certificate` = 'da cong chieu' WHERE (`movie_id` = '1');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('1', 'TIỆC TRĂNG MÁU', 'Nguyễn Quang Dũng', '2018', '2020-08-28', 'https://galaxycine.vn/media/2020/6/22/ttm-teaser-poster_1592795414419.jpg', '');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('2', 'LƯU LY', 'Doãn Đào', '2020', '/11307/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('3', 'ĐẶC VỤ NGẦM', 'Adrian Bol', '2020', '2020-07-28', '/11287/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('4', 'ĐẠI HIỆP KHÁCH NGYÊN GIÁP', 'Bách Sam', '2020', '/11274/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('5', 'BORUTO: NAROTO THẾ HỆ KẾ TIẾP', '2017', '2017-04-05', '/4997/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('6', 'ĐÓA HOA ÁC MA', 'Kim Cheol-Kyu', '2020', '2020-07-27', '/11176/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('7', 'CĂN PHÒNG ĐẪM MÁU', 'Yoon Een-Kyoung', '2020', '2020-04-29', '/11282/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('8', 'NA TRA HÀN YÊU KÝ', 'Cao Tiến Minh', '2020', '/11110/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('9', 'THỜI KỲ PHIẾN LOẠN', 'Hong-sun Kim', '2017', '2017-11-14', '/11331/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('10', 'ĐẠO MỘ BÚT KÝ 3: TRÙNG KHỞI', '2020', '2020-07-15', '/9152/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('11', 'DÂN GIAN KỲ DỊCH CHÍ', '2020', '/10945/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('12', 'QUYẾT  KHÔNG KHUẤT PHỤC', 'Chu Hiển Dương', '2020', '/11197/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('13', 'THÀNH TROY SỤP ĐỔ (PHẦN 1)', 'David Farr', '2018', '2018-02-17', '/11327/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('14', 'HÀN LONG ĐẠI SƯ: TRÓC YÊU BẢNG', '2020', '/11068/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('15', 'CHIẾC LA BÀN VÀNG', 'Chris Weitz', '2007', '2017-12-05', '/6185/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('16', 'HÀ THẦN 2', 'Điền Lý', '2020', '2020-07-06', '/8994/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('17', 'NGƯỜI SẮT 3', 'Shane Black', '2013', '2013-04-24', '/2/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('18', 'NGƯỜI NHỆN: VỀ NHÀ', 'Jon Watts', '2017', '2017-07-07', '/4640/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('19', 'ĐẠI CHIẾN THÁI BÌNH DƯƠNG', 'Guillermo Del Toro', '2013', '2013-07-11', '/1/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('20', '12 CON GIÁP', 'Thành Long', '2013', '/3/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('21', 'CAPTAIN AMERICA 3: NỘI CHIẾN SIÊU ANH HÙNG', '2016', '2016-04-27', '/3086/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_premiereDay`, `movie_coverImage`, `movie_Certificate`) VALUES ('22', 'POKEMON (PHẦN 2)', 'Kunihiko Yuyama', '1997', '1997-04-01', '/2504/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('23', 'ĐẢO HẢI TẶC', 'Eiichiro Oda', '1999', '/665/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_directors`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('24', 'CẨM TÚ NAM CA', 'Lý Tuệ Châu', '2020', '/11166/poster.medium.jpg', '16+');
+INSERT INTO `csdl_movie`.`movies` (`movie_id`, `movie_name`, `movie_year`, `movie_coverImage`, `movie_Certificate`) VALUES ('25', 'ĐẠI ĐƯỜNG VINH NHUỆ', '2017', '/5125/poster.medium.jpg', '16+');
+UPDATE `csdl_movie`.`movies` SET `movie_name` = 'GÃ HỀ', `movie_directors` = 'Todd Phillips', `movie_year` = '2019', `movie_premiereDay` = '2019-10-01', `movie_coverImage` = '/8592/poster.medium.jpg', `movie_Certificate` = '16+' WHERE (`movie_id` = '1');
 
 
 
@@ -129,16 +121,16 @@ UPDATE `csdl_movie`.`tag` SET `tag_name` = 'Phim kinh dị' WHERE (`tag_id` = '3
 
 
 -- insert contry
-INSERT INTO `csdl_movie`.`contry` (`contry_id`, `contry_name`) VALUES ('1', 'VietNam');
-INSERT INTO `csdl_movie`.`contry` (`contry_id`, `contry_name`) VALUES ('2', 'China');
-INSERT INTO `csdl_movie`.`contry` (`contry_id`, `contry_name`) VALUES ('3', 'HongKong');
-INSERT INTO `csdl_movie`.`contry` (`contry_id`, `contry_name`) VALUES ('4', 'Japan');
-INSERT INTO `csdl_movie`.`contry` (`contry_id`, `contry_name`) VALUES ('5', 'USA');
-INSERT INTO `csdl_movie`.`contry` (`contry_id`, `contry_name`) VALUES ('6', 'France');
-INSERT INTO `csdl_movie`.`contry` (`contry_id`, `contry_name`) VALUES ('7', 'Canada');
-INSERT INTO `csdl_movie`.`contry` (`contry_id`, `contry_name`) VALUES ('8', 'English');
-INSERT INTO `csdl_movie`.`contry` (`contry_id`, `contry_name`) VALUES ('9', 'Korea');
-INSERT INTO `csdl_movie`.`contry` (`contry_id`, `contry_name`) VALUES ('10', 'Other countries');
+INSERT INTO `csdl_movie`.`nations` (`nation_id`, `nation_name`) VALUES ('1', 'VietNam');
+INSERT INTO `csdl_movie`.`nations` (`nation_id`, `nation_name`) VALUES ('2', 'China');
+INSERT INTO `csdl_movie`.`nations` (`nation_id`, `nation_name`) VALUES ('3', 'HongKong');
+INSERT INTO `csdl_movie`.`nations` (`nation_id`, `nation_name`) VALUES ('4', 'Japan');
+INSERT INTO `csdl_movie`.`nations` (`nation_id`, `nation_name`) VALUES ('5', 'USA');
+INSERT INTO `csdl_movie`.`nations` (`nation_id`, `nation_name`) VALUES ('6', 'France');
+INSERT INTO `csdl_movie`.`nations` (`nation_id`, `nation_name`) VALUES ('7', 'Canada');
+INSERT INTO `csdl_movie`.`nations` (`nation_id`, `nation_name`) VALUES ('8', 'English');
+INSERT INTO `csdl_movie`.`nations` (`nation_id`, `nation_name`) VALUES ('9', 'Korea');
+INSERT INTO `csdl_movie`.`nations` (`nation_id`, `nation_name`) VALUES ('10', 'Other countries');
 
 
 -- insert tagClassiFication
@@ -247,67 +239,67 @@ INSERT INTO `csdl_movie`.`tagclassification` (`id`, `tag_id`, `movie_id`) VALUES
 
 
 -- insert contryClassiFication
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('1', '5', '1');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('2', '7', '1');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('3', '2', '2');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('4', '5', '3');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('5', '8', '3');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('6', '10', '3');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('7', '2', '4');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('8', '4', '5');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('9', '9', '6');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('10', '9', '7');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('11', '2', '8');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('12', '9', '9');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('13', '2', '10');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('14', '2', '11');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('15', '2', '12');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('16', '5', '13');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('17', '8', '13');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('18', '10', '13');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('19', '2', '14');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('20', '5', '15');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('21', '8', '15');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('22', '2', '16');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('23', '2', '17');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('24', '5', '17');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('25', '5', '18');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('26', '5', '19');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('27', '2', '20');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('28', '3', '20');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('29', '5', '21');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('30', '4', '22');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('31', '4', '23');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('32', '2', '24');
-INSERT INTO `csdl_movie`.`contryclassification` (`id`, `contry_id`, `movie_id`) VALUES ('33', '2', '25');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('1', '5', '1');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('2', '7', '1');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('3', '2', '2');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('4', '5', '3');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('5', '8', '3');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('6', '10', '3');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('7', '2', '4');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('8', '4', '5');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('9', '9', '6');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('10', '9', '7');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('11', '2', '8');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('12', '9', '9');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('13', '2', '10');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('14', '2', '11');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('15', '2', '12');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('16', '5', '13');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('17', '8', '13');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('18', '10', '13');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('19', '2', '14');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('20', '5', '15');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('21', '8', '15');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('22', '2', '16');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('23', '2', '17');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('24', '5', '17');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('25', '5', '18');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('26', '5', '19');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('27', '2', '20');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('28', '3', '20');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('29', '5', '21');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('30', '4', '22');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('31', '4', '23');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('32', '2', '24');
+INSERT INTO `csdl_movie`.`nationsclassification` (`id`, `nation_id`, `movie_id`) VALUES ('33', '2', '25');
 
 -- insert favourite
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('1', '2');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('1', '3');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('1', '5');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('2', '1');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('2', '5');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('2', '7');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('2', '2');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('2', '9');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('2', '3');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('5', '4');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('5', '7');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('5', '3');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('5', '4');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('5', '5');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('1', '6');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('1', '8');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('1', '22');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('11', '5');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('4', '4');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('4', '6');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('4', '7');
-INSERT INTO `csdl_movie`.`listoffvorites` (`ctm_id`, `movie_id`) VALUES ('4', '8');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('1', '2');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('1', '3');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('1', '5');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('2', '1');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('2', '5');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('2', '7');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('2', '2');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('2', '9');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('2', '3');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('5', '4');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('5', '7');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('5', '3');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('5', '4');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('5', '5');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('1', '6');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('1', '8');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('1', '22');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('11', '5');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('4', '4');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('4', '6');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('4', '7');
+INSERT INTO `csdl_movie`.`favourites` (`ctm_id`, `movie_id`) VALUES ('4', '8');
 
 
 -- insert request
-INSERT INTO `csdl_movie`.`reques` (`req_id`, `req_content`, `req_status`, `ctm_id`) VALUES ('1', 'Tôi thấy hơn ít phim các bạn cập nhâp thêm nhiều phim lên!!!!', '1', '3');
+INSERT INTO `csdl_movie`.`request` (`req_id`, `req_content`, `ctm_id`) VALUES ('1', 'Tôi thấy hơn ít phim các bạn cập nhâp thêm nhiều phim lên!!!!', '3');
 
 -- insert about
 INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.1', 'Add:\n- Thêm chức năng đổi mật khẩu\n Fix:\n- Sửa lại tên file\n- Sắp xếp lại các file về đúng layer');
@@ -319,4 +311,5 @@ INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.6', 'Add:\n- Thêm c
 INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.7', 'Fix:\n- Sửa lại giao diện chức năng request cho member và quản lý request cho admin\n- Sắp xếp lại Code lại theo Layer\n- Sắp xếp lại Code để dễ theo dõi sau này\n- Sửa lại một chút về thanh hiển thị thông tin khi đăng nhập thành công\n- Sửa một số lỗi còn tồn đọng ở bản trước\nAdd:\n- Thêm dòng hiển thị tên giao diện đang được sử dụng');
 INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.8', 'Add:\n- Thêm chức năng Danh sách phim yêu thích\nFix:\n- Sửa lại UI ra thành từng phần để dễ quản lý\n- Sửa lại một số chỗ UI cho thuận mắt\n- Sửa một số lỗi');
 INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.9', 'Fix:\n- Sửa việc Danh sách phim yêu thích trả về kết quả trùng lặp');
+INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.5.0', 'Fix:\n- Sửa lại một số lỗi mới phát hiện ở phiên bản trước\n- Chỉnh lại UI phần tìm kiếm phim\n + Giờ đây khi bạn chọn ID phim sẽ hiện thông tin chi tiết và danh sách các tập phim thay vì chỉ hiện mỗi link phim');
 

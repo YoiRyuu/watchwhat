@@ -119,14 +119,4 @@ public class Process {
                 return Yes_No_int();
         }
     }
-
-    public static void DecorateLine(int number) {
-        System.out.printf("+%-" + number + "s+\n", Constants.line.substring(0, number));
-    }
-
-    public static void DecorateContent(String content) {
-        int center = (172 - content.length()) / 2;
-        System.out.printf("| %-" + center + "s %-" + content.length() + "s %-" + center + "s |\n", Constants.space,
-                content, Constants.space);
-    }
 }
