@@ -50,9 +50,9 @@ delimiter ;
 delimiter //
 CREATE PROCEDURE search_nation(IN input int)
 BEGIN
-	SELECT c.movie_id,c.movie_name,c.movie_directors,c.movie_year,c.movie_premiereDay,c.movie_coverImage,c.movie_Certificate, c.movie_Rate, c.movie_Description
-    FROM nations AS a INNER JOIN nationsClassification AS b ON a.nation_id = b.nation_id INNER JOIN movies AS c ON b.movie_id = c.movie_id
-    WHERE a.nation_id = input;
+	SELECT c.movie_id,c.movie_name,c.movie_directors,c.movie_year,c.movie_premiereDay,c.movie_coverImage,c.movie_Certificate, c.movie_Rate, c.movie_Description, e.nation_name, a.tag_name
+    FROM tag AS a INNER JOIN tagclassification AS b ON a.tag_id = b.tag_id INNER JOIN movies AS c ON b.movie_id = c.movie_id INNER JOIN nationsclassification AS d ON d.movie_id = c.movie_id INNER JOIN nations AS e ON e.nation_id = d.nation_id
+    WHERE e.nation_id = input;
 END //
 delimiter ;
 -- DROP PROCEDURE search_nation
@@ -61,13 +61,13 @@ delimiter ;
 delimiter //
 CREATE PROCEDURE search_name(IN input VARCHAR(90))
 BEGIN
-	SELECT movie_id, SUBSTRING(movie_name,1,43) AS movie_name, SUBSTRING(movie_directors,1,28) AS movie_directors, movie_year, movie_premiereDay, SUBSTRING(movie_coverImage,1,70) AS movie_coverImage, movie_Certificate, movie_Rate, movie_Description
-    FROM movies
+    SELECT c.movie_id, SUBSTRING(c.movie_name,1,43) AS movie_name, SUBSTRING(c.movie_directors,1,28) AS movie_directors, c.movie_year, c.movie_premiereDay, SUBSTRING(c.movie_coverImage,1,70) AS movie_coverImage, c.movie_Certificate, c.movie_Rate, c.movie_Description, e.nation_name, a.tag_name
+    FROM tag AS a INNER JOIN tagclassification AS b ON a.tag_id = b.tag_id INNER JOIN movies AS c ON b.movie_id = c.movie_id INNER JOIN nationsclassification AS d ON d.movie_id = c.movie_id INNER JOIN nations AS e ON e.nation_id = d.nation_id
     WHERE movie_name LIKE concat('%',input,'%');
 END //
 delimiter ;
 -- DROP PROCEDURE search_name
--- CALL search_name('a')
+-- CALL search_name('na')
 
 delimiter //
 CREATE PROCEDURE update_mov_info(IN input VARCHAR(90),input2 VARCHAR(50), input3 INT, input4 VARCHAR(500), input5 INT)
@@ -151,9 +151,10 @@ delimiter ;
 delimiter //
 CREATE PROCEDURE listfavourite(IN cus_id int)
 BEGIN
-	SELECT DISTINCT a.movie_id, b.movie_name,b.movie_directors,b.movie_year,b.movie_premiereDay,b.movie_coverImage,b.movie_Certificate
+	SELECT a.movie_id, b.movie_name,b.movie_directors,b.movie_year,b.movie_premiereDay,b.movie_coverImage,b.movie_Certificate
 	FROM favourites AS a INNER JOIN movies AS b ON a.movie_id = b.movie_id
-	WHERE a.ctm_id = cus_id AND a.stt = 1;
+	WHERE a.ctm_id = cus_id AND a.stt = 1
+    GROUP BY a.movie_id;
 END //
 delimiter ;
 -- DROP PROCEDURE listfavourite
@@ -179,3 +180,39 @@ END //
 delimiter ;
 -- DROP PROCEDURE rvfavouritelist
 -- CALL rvfavouritelist(1,2)
+
+delimiter //
+CREATE PROCEDURE movie_information()
+BEGIN
+	SELECT a.movie_id, a.movie_name,a.movie_directors,a.movie_year,a.movie_premiereDay,a.movie_coverImage,a.movie_Certificate,a.movie_Rate,a.movie_Description,c.nation_name,e.tag_name
+	FROM csdl_movie.movies AS a 
+	INNER JOIN csdl_movie.nationsclassification AS b ON a.movie_id = b.movie_id
+	INNER JOIN csdl_movie.nations AS c ON b.nation_id = c.nation_id
+	INNER JOIN csdl_movie.tagclassification AS d ON a.movie_id = d.movie_id
+	INNER JOIN csdl_movie.tag AS e ON d.tag_id = e.tag_id;
+END //
+delimiter ;
+-- DROP PROCEDURE movie_information
+-- CALL movie_information()
+
+delimiter //
+CREATE PROCEDURE search_tag(IN input int)
+BEGIN
+	SELECT c.movie_id,c.movie_name,c.movie_directors,c.movie_year,c.movie_premiereDay,c.movie_coverImage,c.movie_Certificate, c.movie_Rate, c.movie_Description, e.nation_name, a.tag_name
+    FROM tag AS a INNER JOIN tagclassification AS b ON a.tag_id = b.tag_id INNER JOIN movies AS c ON b.movie_id = c.movie_id INNER JOIN nationsclassification AS d ON d.movie_id = c.movie_id INNER JOIN nations AS e ON e.nation_id = d.nation_id
+    WHERE a.tag_id = input;
+END //
+delimiter ;
+-- DROP PROCEDURE search_tag
+-- CALL search_tag(6)
+
+delimiter //
+CREATE PROCEDURE updatefavouritelist(IN input int, input2 int)
+BEGIN
+	UPDATE favourites
+	SET stt = 1
+	WHERE ctm_id = input AND movie_id = input2;
+END //
+delimiter ;
+-- DROP PROCEDURE updatefavouritelist
+-- CALL updatefavouritelist(1,2)

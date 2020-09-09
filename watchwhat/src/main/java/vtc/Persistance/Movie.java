@@ -12,6 +12,8 @@ public class Movie {
     private String movieCERTIFICATE;
     private Double movieRate;
     private String movieDescrip;
+    private String movieNation;
+    private String movieTag;
 
     // movie ID
     public void setMovieID(int movieid) {
@@ -89,6 +91,20 @@ public class Movie {
     }
     public String getmovieDescription() {
         return movieDescrip;
+    }
+    // movie nation
+    public void setmovieNation(String na) {
+        this.movieNation = na;
+    }
+    public String getmovieNation() {
+        return movieNation;
+    }
+    // movie tag
+    public void setmovieTag(String tag) {
+        this.movieTag = tag;
+    }
+    public String getmovieTag() {
+        return movieTag;
     }
 
     @Override

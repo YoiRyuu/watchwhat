@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import vtc.Utils.Constants;
+import vtc.Utils.Process;
 import vtc.Persistance.User;
 import vtc.UI.ManageMemberUI;
 
@@ -72,9 +73,9 @@ public class UserDAL {
             callableStatement.setInt(1, id);
             callableStatement.setString(2, newpass);
             callableStatement.execute();
-            System.out.println(Constants.ChangePassSuccess);
+            Process.AlignCenter(100, " ", " ", Constants.ChangePassSuccess);
         } catch (Exception e) {
-            System.out.println(Constants.ChangePassFailed);
+            Process.AlignCenter(100, " ", " ", Constants.ChangePassFailed);
         }
     }
 

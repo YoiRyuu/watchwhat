@@ -26,6 +26,10 @@ public class MovieBL {
         return dal.getMovie_byNation(id);
     }
 
+    public List<Movie> getTagsMovies(int id) {
+        return dal.getMovie_byTags(id);
+    }
+
     public static void searchMovieName(String movname) throws SQLException {
         List<Movie> lst = new MovieBL().getNameMovies(movname);
         MovieUI.show_mov(lst);
@@ -36,6 +40,15 @@ public class MovieBL {
         MovieUI.show_mov(lst2);
     }
 
+    public static void searchMovieTag(int id) throws SQLException {
+        List<Movie> lst3 = new MovieBL().getNationMovies(id);
+        MovieUI.show_mov(lst3);
+    }
+
+    //get infor movie
+    public static void getinformovie(int id) {
+        
+    }
     // For Admin
     public static void update_mov_info(int select) throws SQLException {
         boolean is_continue = true;

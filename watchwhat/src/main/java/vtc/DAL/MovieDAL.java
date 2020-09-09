@@ -13,7 +13,7 @@ import vtc.Utils.Constants;
 
 public class MovieDAL {
     public List<Movie> getMovieAll() {
-        String sql = "SELECT * FROM csdl_movie.movie;";
+        String sql = "CALL movie_information()";
         List<Movie> lst = new ArrayList<>();
         try (Connection con = DbUtil.getConnection();
                 Statement stm = con.createStatement();
@@ -28,7 +28,6 @@ public class MovieDAL {
     }
 
     public List<Movie> getMovieByName(String movname) {
-        // String sql = "SELECT * FROM csdl_movie.movie WHERE movie_name LIKE concat('%'," + movname + ",'%)'";
         String sql = "CALL search_name('" + movname + "')";
         List<Movie> lst = new ArrayList<>();
         try (Connection con = DbUtil.getConnection();
@@ -58,6 +57,21 @@ public class MovieDAL {
         return lst;
     }
 
+    public List<Movie> getMovie_byTags(int id) {
+        String sql = "CALL search_tag(" + id + ")";
+        List<Movie> lst = new ArrayList<>();
+        try (Connection con = DbUtil.getConnection();
+                Statement stm = con.createStatement();
+                ResultSet rSet = stm.executeQuery(sql)) {
+            while (rSet.next()) {
+                lst.add(getMovie(rSet));
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        return lst;
+    }
+
     private Movie getMovie(final ResultSet rSet) throws SQLException {
         Movie mov = new Movie();
         mov.setMovieID(rSet.getInt("movie_id"));
@@ -69,10 +83,12 @@ public class MovieDAL {
         mov.setmovieCERTIFICATE(rSet.getString("movie_Certificate"));
         mov.setmovieRate(rSet.getDouble("movie_Rate"));
         mov.setmovieDescription(rSet.getString("movie_Description"));
+        mov.setmovieNation(rSet.getString("nation_name"));
+        mov.setmovieTag(rSet.getString("tag_name"));
         return mov;
     }
 
-    public static void update_movinfo(String name, String dir, int year, String cv,int id) throws SQLException {
+    public static void update_movinfo(String name, String dir, int year, String cv, int id) throws SQLException {
         String callStoreProcedure = "{CALL update_mov_info(?,?,?,?,?)}";
         try (CallableStatement callableStatement = DbUtil.getConnection().prepareCall(callStoreProcedure)) {
             callableStatement.setString(1, name);
@@ -98,4 +114,5 @@ public class MovieDAL {
             System.out.println(Constants.movieFailed);
         }
     }
+
 }

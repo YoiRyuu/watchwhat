@@ -2,7 +2,7 @@ package vtc.Utils;
 
 import java.sql.Date;
 
-public class Constants {
+public class Constants2 {
     // temp
     public static int id_temp;
     public static String name_temp;
@@ -38,15 +38,15 @@ public class Constants {
     public static String Decorate4  = "+------------+---------------------------------------------+------------------------------+----------+";
     public static String Decorate5  = "+-------+--------------------------------+----------------------------------------------------+-------------+-------------+------------+--------+--------------------------------+";
     public static String Decorate6  = "+----------------------------------------------------------+--------------------------------------------------+";
-    public static String Decorate7  = "+----------------------------------------------------------------------------------------+-----------+";
+    public static String Decorate7  = "+----------------------------------------------------+------------+----------------------------------------------------+";
     public static String Decorate8  = "+------------+---------------------------------------------+------------------------------+------+";
     public static String line       = "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"; //196
     public static String space      = " ";
 
     // Welcome & Header
-    public static String Welcome1               = "Welcome to WatchWhat application!";
-    public static String Welcome2               = "PF10 - Group 4";
-    public static String showver                = "Version " + Constants.ver;
+    public static String Welcome1               = "|    Welcome to WatchWhat application!       |";
+    public static String Welcome2               = "|    PF10 - Group 4                          |";
+    public static String showver                = "|    [ Version " + Constants.ver + " ]                       |";
     public static String headmov1               = "[   - ID -   |              - Movie's Name -               |         - Director -         | - Year - |";
     public static String logString              = "Welcome, ";
     // movie information
@@ -59,18 +59,17 @@ public class Constants {
     public static String info7String            = "Certificate: ";
     
     // Name UI
-    public static String UIwelcome              = "Main menu";
-    public static String UIregister             = "New Register";
-    public static String UIlogin                = "Login into application";
-    public static String UImenu                 = "Menu";
-    public static String UIprofile              = "Profile";
-    public static String UIviewprofile          = "View Profile";
-    public static String UIviewfavourite        = "View Favourite";    
-    public static String UIupdateprofile        = "Update Profile";
-    public static String UIchangepassword       = "Change password";
-    public static String UImovie                = "Movie";
-    public static String UIrequest              = "Request";
-    public static String UImanagemember         = "Manage member";
+    public static String UIwelcome              = "|                 MAIN MENU                  |";
+    public static String UIregister             = "|     New Register                           |";
+    public static String UIlogin                = "|     Login into application                 |";
+    public static String UImenu                 = "|     Menu                                   |";
+    public static String UIprofile              = "|     Profile                                |";
+    public static String UIviewprofile          = "|     View Profile                           |";
+    public static String UIupdateprofile        = "|     Update Profile                         |";
+    public static String UIchangepassword       = "|     Change password                        |";
+    public static String UImovie                = "|     Movie                                  |";
+    public static String UIrequest              = "|     Request                                |";
+    public static String UImanagemember         = "|     Manage member                          |";
 
     /* Button */
     public static String buttonback             = "| [0] Back                                   |";
@@ -103,9 +102,8 @@ public class Constants {
     // Warning
     public static String pleasechoiceInt    = "  Input a number to choose    : ";
     public static String pleasechoiceString = "  Input a character to choose : ";
-    public static String Wrongchoice        = "  [!] Input a number! Please choice again!";
-    public static String WrongchoiceString  = "  [!] Input a character below! Please choice again!";
-    public static String Continue           = "  [>] Press [Enter] or input any key for continue... ";
+    public static String Wrongchoice        = "  [!] Please choice again!";
+    public static String Continue           = "  [>] Press any key for continue... ";
     public static String ExitApp            = "  [!] Thank you for used application!";
     public static String RegisterSuccess    = "  [!] Register new Account is success!";
     public static String RegisterFailed     = "  [x] Register new Account is failed!";
@@ -126,17 +124,16 @@ public class Constants {
     public static String exitString         = "  [?] Do you want Exit? (Y/N): ";
     public static String logoutString       = "  [?] Do you want Logout? (Y/N): ";
     public static String over32String       = "  [!] Range [3-32] characters...";
-    public static String over50String       = "  [!] Range [10-50] characters...";
+    public static String over50String       = "  [!] Range [5-50] characters...";
     public static String haveSpaceString    = "  [!] Cannot input space characters...";
     public static String numberindex0       = "  [!] Cannot input number in header...";
     public static String wrongemailformat   = "  [!] Wrong E-mail format...";
-    public static String emailformat1       = "  [!] E-mail format is true [name@company.domain]";    
-    public static String emailformat2       = "  'name', 'company', 'domain' have > 1 character, '@' have only 1";    
+    public static String emailformat        = "  [!] E-mail format is true [name@company.domain]\n      name, company, domain have > 1 character";
     // Error
     public static String checkEmpty         = "  [!] Input is empty! Try again";
     public static String checkNumberEmpty   = "  [!] Try again! Input is Integer number > 0 : ";
     public static String username_exist     = "  [x] Username exist, please try again!";
-    public static String email_exist        = "  [x] Username exist, please try again!";
+    public static String email_exist     = "  [x] Username exist, please try again!";
     public static String wrongdate          = "  [x] Date is wrong, try again... ";
     public static String wrongpass          = "  [x] Password wrong, try again... ";
     public static String wrongoldpass       = "  [?] Old Password wrong, try again? (Y/N)...";
@@ -177,25 +174,24 @@ public class Constants {
     public static String update_mov     = "  [?] Do you want movie's infomation update (Y/N): ";
     
     // infor app
-    public static String aboutme1 = "Name: WatchWhat";
-    public static String aboutme2 = "Version: " + ver;
-    public static String aboutme3 = "Creator: Phan Gia Long & Tran Dai Loi";
-    public static String aboutme4 = "Intructor: Vu Tran Lam";
-    public static String aboutme5 = "Code by Java, 2020";
-    public static String aboutme6 = "If you find bug, please contact";
-    public static String aboutme7 = "Email: longpg.nde19090@vtc.edu.vn";
+    public static String aboutme1 = "| Name: WatchWhat                            |";
+    public static String aboutme2 = "| Version: " + ver + "                             |";
+    public static String aboutme3 = "| Creator: Phan Gia Long & Tran Dai Loi      |";
+    public static String aboutme4 = "| Intructor: Vu Tran Lam                     |";
+    public static String aboutme5 = "| Code by Java, 2020                         |";
+    public static String aboutme6 = "| If you find bug, please contact            |";
+    public static String aboutme7 = "| Email: longpg.nde19090@vtc.edu.vn          |";
 
 
     //View profile
-    public static String profileinfo1   = "My ID, yeah I am only one";
-    public static String profileinfo2   = "My name is";
-    public static String profileinfo3   = "Account to log into the system";
-    public static String profileinfo4   = "Password to log into the system";
-    public static String profileinfo4_1 = "hmm... that is secret";
-    public static String profileinfo5   = "Electronic Mail, oh is Email";
-    public static String profileinfo6   = "The first day you cried";
-    public static String profileinfo7   = "Big hand hah";
-    public static String profileinfo7_1 = "Hehe, just is member no more o(*￣▽￣*)";
-    public static String profileinfo7_2 = "Yep, I'm BOSS ( •̀ ω •́ )✧";
-    public static String profileinfo8   = "Join into the system from";
+    public static String profileinfo1   = "| My ID, yeah I am only one                  | ";
+    public static String profileinfo2   = "| My name is                                 | ";
+    public static String profileinfo3   = "| Account to log into the system             | ";
+    public static String profileinfo4   = "| Password to log into the system            | hmm... that is secret                      |";
+    public static String profileinfo5   = "| Electronic Mail, oh is Email               | ";
+    public static String profileinfo6   = "| The first day you cried                    | ";
+    public static String profileinfo7   = "| Big hand hah                               | ";
+    public static String profileinfo7_1 = "Hehe, just is member no more o(*￣▽￣*)    |";
+    public static String profileinfo7_2 = "Yep, I'm BOSS ( •̀ ω •́ )✧                   |";
+    public static String profileinfo8   = "| Join into the system from                  | ";
 }

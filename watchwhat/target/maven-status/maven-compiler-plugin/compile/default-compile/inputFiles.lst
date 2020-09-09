@@ -2,7 +2,9 @@ C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\H
 C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\DAL\FavouriteDAL.java
 C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\AboutmeUI.java
 C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\FavouriteUI.java
+C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\BL\TagsBL.java
 C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\ManageMemberUI.java
+C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Persistance\Tags.java
 C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\App.java
 C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Persistance\Favourite.java
 C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\Paragraph.java
@@ -14,6 +16,7 @@ C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\DAL\
 C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Persistance\Nation.java
 C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\DAL\DbUtil.java
 C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\BL\SourcesBL.java
+C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\DAL\TagsDAL.java
 C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\BL\NationBL.java
 C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\BL\RequestBL.java
 C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Persistance\User.java

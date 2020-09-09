@@ -7,22 +7,25 @@ import java.text.ParseException;
 import java.util.Scanner;
 
 import vtc.Utils.Constants;
+import vtc.Utils.Process;
 
 public class MainUI {
     static Scanner sc = new Scanner(System.in);
 
     public static void welcomeUI() throws SQLException, ParseException {
         boolean is_continue = true;
+        String warning = "♪♫♪~d(^.^)b~♪♫♪";
         while (is_continue) {
             HeaderUI.headerUI();
-            out.println(Constants.UIwelcome);
-            out.println(Constants.Decorate2);
-            out.println(Constants.buttonregister);
-            out.println(Constants.buttonlogin);
-            out.println(Constants.buttonabout);
-            out.println(Constants.buttonexit);
-            out.println(Constants.Decorate2);
-            out.print(Constants.pleasechoiceInt);
+            Process.AlignCenter(100, "|", "|", Constants.UIwelcome);
+            Process.DecorateLine(100, "+", "+");
+            Process.AlignCenter(100, "|", "|", Constants.buttonregister);
+            Process.AlignCenter(100, "|", "|", Constants.buttonlogin);
+            Process.AlignCenter(100, "|", "|", Constants.buttonabout);
+            Process.AlignCenter(100, "|", "|", Constants.buttonexit);
+            Process.DecorateLine(100, "+", "+");
+            Process.AlignCenter(100, "!", "!", warning);
+            Process.AlignCenterInput(100, Constants.pleasechoiceInt);
             String choice = sc.nextLine();
             switch (choice) {
                 case "1":
@@ -35,11 +38,17 @@ public class MainUI {
                     AboutmeUI.aboutme();
                     break;
                 case "0":
-                    out.println(Constants.ExitApp);
-                    is_continue = false;
+                    System.out.print(Constants.exitString);
+                    int ys = new Process().Yes_No_int();
+                    if (ys == 0) {
+                        out.println(Constants.ExitApp);
+                        is_continue = false;
+                    } else {
+                        is_continue = true;
+                    }
                     break;
                 default:
-                    out.println(Constants.Wrongchoice);
+                    warning = Constants.Wrongchoice;
                     break;
             }
         }

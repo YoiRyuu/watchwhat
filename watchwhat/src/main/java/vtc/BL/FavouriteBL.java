@@ -15,6 +15,15 @@ public class FavouriteBL {
     }
 
     public static void addfavourite(int memberID, int movieID) throws SQLException {
-        FavouriteDAL.addFavourite(memberID, movieID);
+        // check_favourite_exist
+        // neu khong ton tai thi tao moi
+        if (FavouriteDAL.check_favourite_exist(memberID, movieID) == 0) {
+            FavouriteDAL.addFavourite(memberID, movieID);
+        }
+        // neu ton tai thi update
+        else {
+            FavouriteDAL.updateFavourite(memberID, movieID);
+        }
+
     }
 }

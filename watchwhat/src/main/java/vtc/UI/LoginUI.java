@@ -10,14 +10,19 @@ import vtc.Utils.Process;
 
 public class LoginUI {
     static Scanner sc = new Scanner(System.in);
+
+    public static void HeaderLoginUI() {
+        HeaderUI.headerUI();
+        Process.AlignCenter(100, "|", "|", Constants.UIlogin);
+        Process.DecorateLine(100, "+", "+");
+    }
+
     // Use case login
     public static void memberloginUI() throws SQLException {
-        HeaderUI.headerUI();
-        out.println(Constants.UIlogin);
-        out.println(Constants.Decorate2);
         while (true) {
-            System.out.print(Constants.username);
-            String userString = new Process().check_string_empty();
+            HeaderLoginUI();
+            // check acc
+            String userString = new Process().checkAcc(1);
             System.out.print(Constants.password);
             String passString = new Process().check_string_empty();
             if (UserBL.login_into(userString, passString) == 1) {
@@ -30,27 +35,29 @@ public class LoginUI {
 
     public static void memberloginUI_success() throws SQLException {
         boolean is_continue = true;
+        String warning = "♪♫♪~d(^.^)b~♪♫♪";
         while (is_continue) {
             HeaderUI.headerUI();
             HeaderUI.login_success();
-            out.println(Constants.UImenu);
-            out.println(Constants.Decorate2);
-            out.println(Constants.buttonprofile);
-            out.println(Constants.buttonchangepass);
-            out.println(Constants.buttonfavourite);
+            Process.AlignCenter(100, "|", "|", Constants.UImenu);
+            Process.DecorateLine(100, "+", "+");
+            Process.AlignCenter(100, "|", "|", Constants.buttonprofile);
+            Process.AlignCenter(100, "|", "|", Constants.buttonchangepass);
+            Process.AlignCenter(100, "|", "|", Constants.buttonfavourite);
             if (Constants.lvl_temp == 1) {
-                out.println(Constants.buttonsearchmovie);
-                out.println(Constants.buttonrequest);
+                Process.AlignCenter(100, "|", "|", Constants.buttonsearchmovie);
+                Process.AlignCenter(100, "|", "|", Constants.buttonrequest);
             }
 
             if (Constants.lvl_temp > 1) {
-                out.println(Constants.buttonsearchmovie2);
-                out.println(Constants.buttonmngrequest);
-                out.println(Constants.buttonmngmember);
+                Process.AlignCenter(100, "|", "|", Constants.buttonsearchmovie2);
+                Process.AlignCenter(100, "|", "|", Constants.buttonmngrequest);
+                Process.AlignCenter(100, "|", "|", Constants.buttonmngmember);
             }
-            out.println(Constants.buttonlogout);
-            out.println(Constants.Decorate2);
-            out.print(Constants.pleasechoiceInt);
+            Process.AlignCenter(100, "|", "|", Constants.buttonlogout);
+            Process.DecorateLine(100, "+", "+");
+            Process.AlignCenter(100, "!", "!", warning);
+            Process.AlignCenterInput(100, Constants.pleasechoiceInt);
             String choice = sc.nextLine();
             switch (choice) {
                 case "1":
@@ -83,10 +90,17 @@ public class LoginUI {
                     }
                     break;
                 case "0":
+                    Process.AlignCenterInput(100, Constants.logoutString);
+                    int ys = new Process().Yes_No_int();
+                    if (ys == 0) {
+                        is_continue = false;
+                    } else {
+                        is_continue = true;
+                    }
                     is_continue = false;
                     break;
                 default:
-                    out.println(Constants.Wrongchoice);
+                    warning = Constants.Wrongchoice;
                     break;
             }
         }

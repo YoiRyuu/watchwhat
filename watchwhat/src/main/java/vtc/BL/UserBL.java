@@ -11,6 +11,7 @@ import vtc.DAL.UserDAL;
 import vtc.Utils.Constants;
 import vtc.Utils.Process;
 import vtc.Persistance.User;
+import vtc.UI.HeaderUI;
 import vtc.UI.LoginUI;
 import vtc.UI.ProfileUI;
 
@@ -87,6 +88,10 @@ public class UserBL {
             }
         }
         if (n == 0) {
+            HeaderUI.headerUI();
+            HeaderUI.login_success();
+            Process.AlignCenter(100, "|", "|", Constants.UIchangepassword);
+            Process.DecorateLine(100, "+", "+");
             System.out.print(Constants.wrongoldpass);
             return new Process().Yes_No_int();
         }

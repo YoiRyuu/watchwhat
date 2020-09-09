@@ -11,4 +11,6 @@ public class NationBL {
     public List<Nation> showAllNations() {
         return dal.showNation();
     }
+
+    
 }

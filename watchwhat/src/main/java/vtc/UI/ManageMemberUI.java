@@ -15,19 +15,25 @@ import vtc.Utils.Process;
 public class ManageMemberUI {
     static Scanner sc = new Scanner(System.in);
 
+    public static void mng_header() {
+        HeaderUI.headerUI();
+        HeaderUI.login_success();
+        Process.AlignCenter(100, "|", "|", Constants.UImanagemember);
+        Process.DecorateLine(100, "+", "+");
+    }
+
     /* Use case Manage Members - Quản lý thành viên */
     public static void Manage_memberUI() throws SQLException {
         boolean is_continue = true;
+        String warning = "♪♫♪~d(^.^)b~♪♫♪";
         while (is_continue) {
-            HeaderUI.headerUI();
-            HeaderUI.login_success();
-            out.println(Constants.UImanagemember);
-            out.println(Constants.Decorate2);
-            out.println(Constants.button_mngmem1);
-            out.println(Constants.button_mngmem2);
-            out.println(Constants.buttonback);
-            out.println(Constants.Decorate2);
-            out.print(Constants.pleasechoiceInt);
+            mng_header();
+            Process.AlignCenter(100, "|", "|", Constants.button_mngmem1);
+            Process.AlignCenter(100, "|", "|", Constants.button_mngmem2);
+            Process.AlignCenter(100, "|", "|", Constants.buttonback);
+            Process.DecorateLine(100, "+", "+");
+            Process.AlignCenter(100, "!", "!", warning);
+            Process.AlignCenterInput(100, Constants.pleasechoiceInt);
             String choice = sc.nextLine();
             switch (choice) {
                 case "1":
@@ -40,7 +46,7 @@ public class ManageMemberUI {
                     is_continue = false;
                     break;
                 default:
-                    out.println(Constants.Wrongchoice);
+                    warning = Constants.Wrongchoice;
                     break;
             }
         }

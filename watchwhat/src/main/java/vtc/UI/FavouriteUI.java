@@ -17,10 +17,16 @@ import vtc.Utils.Process;
 public class FavouriteUI {
     static Scanner sc = new Scanner(System.in);
 
-    // Use case favourite
-    public static void favourite_main() throws SQLException {
+    public static void favourite_header() {
         HeaderUI.headerUI();
         HeaderUI.login_success();
+        Process.AlignCenter(100, "|", "|", Constants.UIviewfavourite);
+        Process.DecorateLine(100, "+", "+");
+    }
+
+    // Use case favourite
+    public static void favourite_main() throws SQLException {
+        favourite_header();
         FavouriteBL.viewfavourite();
     }
 
@@ -33,24 +39,29 @@ public class FavouriteUI {
     }
 
     public static void listfavourite(CallableStatement call) throws SQLException {
-        ResultSet rSet = call.executeQuery();
-        int count = 0;
-        System.out.println(Constants.Decorate8);
-        while (rSet.next()) {
-            String a = "" + rSet.getInt(1);
-            out.printf("[ %-10s | %-43s | %-28s | %-4s ]\n", a, rSet.getString(2), rSet.getString(3), rSet.getInt(4));
-            System.out.println(Constants.Decorate8);
-            count++;
-        }
-        out.println("  [!] " + count + " movie(s) to found");
-        System.out.println(Constants.Decorate8);
-        if (count > 0) {
-            boolean a = true;
-            while (a) {
+        boolean is_Continue = true;
+        String warning = "♪♫♪~d(^.^)b~♪♫♪";
+        while (is_Continue) {
+            ResultSet rSet = call.executeQuery();
+            int count = 0;
+            favourite_header();
+            Process.AlignCenter(100, " ", " ", Constants.Decorate8);
+            while (rSet.next()) {
+                String a = "" + rSet.getInt(1);
+                out.printf("  [ %-10s | %-43s | %-28s | %-4s ]\n", a, rSet.getString(2), rSet.getString(3),
+                        rSet.getInt(4));
+                Process.AlignCenter(100, " ", " ", Constants.Decorate8);
+                count++;
+            }
+            out.println("  [!] " + count + " movie(s) to found");
+            Process.AlignCenter(100, " ", " ", Constants.Decorate8);
+            if (count > 0) {
                 System.out.println(Constants.buttonSelect);
                 System.out.println(Constants.buttonRemove);
                 System.out.println(Constants.buttonBack);
-                System.out.print(Constants.pleasechoiceString);
+                Process.DecorateLine(100, "+", "+");
+                Process.AlignCenter(100, "!", "!", warning);
+                Process.AlignCenterInput(100, Constants.pleasechoiceInt);
                 String key = new Process().check_string_empty();
                 switch (key) {
                     case "S":
@@ -64,30 +75,29 @@ public class FavouriteUI {
                         if (lst2.size() == 0) {
                             System.out.println(Constants.noepisode);
                         }
-                        if (Constants.lvl_temp > 1) {
-                            MovieBL.update_mov_info(select);
-                        }
                         System.out.print(Constants.Continue);
                         sc.nextLine();
-                        a = false;
+                        is_Continue = false;
                         break;
                     case "R":
                     case "r":
                         favourite_update(Constants.id_temp);
-                        a = false;
+                        is_Continue = false;
                         break;
                     case "b":
                     case "B":
-                        a = false;
+                        is_Continue = false;
                         break;
                     default:
-                        System.out.println(Constants.WrongSelect);
+                        warning = Constants.WrongchoiceString;
                         break;
                 }
+
+            } else {
+                System.out.print(Constants.Continue);
+                sc.nextLine();
+                is_Continue = false;
             }
-        } else {
-            System.out.print(Constants.Continue);
-            sc.nextLine();
         }
     }
 

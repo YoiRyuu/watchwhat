@@ -11,6 +11,7 @@ vtc\DAL\NationDAL.class
 vtc\UI\MainUI.class
 vtc\Utils\Constants.class
 vtc\Utils\Process.class
+vtc\Persistance\Tags.class
 vtc\DAL\MovieDAL.class
 vtc\BL\FavouriteBL.class
 vtc\Persistance\Sources.class
@@ -22,10 +23,12 @@ vtc\DAL\SourcesDAL.class
 vtc\App.class
 vtc\BL\UserBL.class
 vtc\Persistance\Movie.class
+vtc\BL\TagsBL.class
 vtc\Persistance\Aboutme.class
 vtc\UI\FavouriteUI.class
 vtc\DAL\FavouriteDAL.class
 vtc\DAL\RequestDAL.class
+vtc\DAL\TagsDAL.class
 vtc\UI\RequestUI.class
 vtc\Persistance\Favourite.class
 vtc\DAL\UserDAL.class

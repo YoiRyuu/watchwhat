@@ -82,7 +82,7 @@ public class RequestDAL {
                     xuly = "Sent";
                     break;
                 case 1:
-                    xuly = "Seen";
+                    xuly = "Wait...";
                     break;
                 case 2:
                     xuly = "Replied";

@@ -15,18 +15,18 @@ public class AboutmeUI {
     /* About me - Giới thiệu phần mềm */
     public static void aboutme() throws SQLException {
         Process.clrscr();
-        out.println(Constants.Decorate2);
-        out.println(Constants.aboutme1);
-        out.println(Constants.aboutme2);
-        out.println(Constants.aboutme3);
-        out.println(Constants.aboutme4);
-        out.println(Constants.aboutme5);
-        out.println(Constants.Decorate2);
-        out.println(Constants.aboutme6);
-        out.println(Constants.aboutme7);
-        out.println(Constants.Decorate2);
+        Process.DecorateLine(100, "+", "+");
+        Process.AlignCenter(100, "|", "|", Constants.aboutme1);
+        Process.AlignCenter(100, "|", "|", Constants.aboutme2);
+        Process.AlignCenter(100, "|", "|", Constants.aboutme3);
+        Process.AlignCenter(100, "|", "|", Constants.aboutme4);
+        Process.AlignCenter(100, "|", "|", Constants.aboutme5);
+        Process.DecorateLine(100, "+", "+");
+        Process.AlignCenter(100, "|", "|", Constants.aboutme6);
+        Process.AlignCenter(100, "|", "|", Constants.aboutme7);
+        Process.DecorateLine(100, "+", "+");
         Aboutme.getAbout();
-        out.println(Constants.Decorate2);
+        Process.DecorateLine(100, "+", "+");
         out.print(Constants.Continue);
         sc.nextLine();
     }
