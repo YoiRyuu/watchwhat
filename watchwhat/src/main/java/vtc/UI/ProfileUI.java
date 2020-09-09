@@ -91,7 +91,6 @@ public class ProfileUI {
         // Process.AlignCenter(100, "|", "|", Constants.newname);
         System.out.print(Constants.newname);
         String name = new Process().check_string_empty();
-        System.out.print(Constants.newemail);
         String email = new Process().checkEmail();
         Date birthdate = new Process().check_Date(Constants.newbirthdate);
         UserBL.update_profile(name, email, birthdate);

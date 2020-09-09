@@ -11,11 +11,11 @@ public class App {
     public static void main(String[] args) throws Exception {
         // Connect to Server
         try (Connection connection = DbUtil.getConnection()) {
-            // for (int i = 3; i > 0; i--) {
-            //     Process.clrscr();
-            //     System.out.print("Connected to MySql Server. Please wait in " + i + "s");
-            //     Thread.sleep(1000);
-            // }
+            for (int i = 3; i > 0; i--) {
+                Process.clrscr();
+                System.out.print("Connected to MySql Server. Please wait in " + i + "s");
+                Thread.sleep(1000);
+            }
             // welcome UI
             Aboutme.autogetAbout();
             MainUI.welcomeUI();
