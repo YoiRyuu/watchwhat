@@ -15,7 +15,7 @@ public class Constants {
     public static String user_temp;
     public static String pass_temp;
     public static int inbox_temp = 0;
-    public static String ver = "0.5.1";
+    public static String ver = "0.5.2";
     public static String notepatch;
     public static int idmov_temp;
 

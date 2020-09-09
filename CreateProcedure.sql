@@ -140,7 +140,7 @@ delimiter ;
 delimiter //
 CREATE PROCEDURE updatemember_id(IN input int, inputname VARCHAR(30), inputemail VARCHAR (50), inputdb DATE, setstt int, setlvl int)
 BEGIN
-	UPDATE customer
+	UPDATE customers
     SET ctm_name = inputname, ctm_email = inputemail, ctm_brithday = inputdb, ctm_status = setstt, ctm_lever = setlvl
     WHERE ctm_id = input;
 END //

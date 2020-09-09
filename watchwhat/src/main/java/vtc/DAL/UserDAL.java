@@ -62,8 +62,10 @@ public class UserDAL {
             callableStatement.setDate(5, birthdDate);
             callableStatement.execute();
             System.out.println(Constants.RegisterSuccess);
-        } catch (Exception e) {
+            // throw new SQLException("insert OK");
+        } catch (SQLException e) {
             System.out.println(Constants.RegisterFailed);
+            // throw new SQLException("insert failed");
         }
     }
 

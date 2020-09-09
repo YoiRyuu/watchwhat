@@ -2,11 +2,13 @@ package vtc.Utils;
 
 import java.io.IOException;
 import java.sql.Date;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
 import vtc.BL.UserBL;
 import vtc.Persistance.User;
+import vtc.UI.LoginUI;
 import vtc.UI.RegisterUI;
 
 public class Process {
@@ -58,45 +60,59 @@ public class Process {
 
     }
 
-    public String checkAcc(int x) {
-        List<User> lst = new UserBL().getAllCustomers();
+    public String checkAcc(int x) throws SQLException {
         boolean checkuser = true;
-        String userString = null, warning = "♪♫♪~d(^.^)b~♪♫♪";
+        String userString = null;
         while (checkuser) {
             System.out.print(Constants.username);
             userString = new Process().check_string_empty().trim();
-            if (userString.length() > 32 || userString.length() < 3) {
-                RegisterUI.Re_showAfterCheckAcc();
-                warning = Constants.over32String;
-                Process.AlignCenter(100, "!", "!", warning);
-            } else if (userString.indexOf(" ") > 0) {
-                RegisterUI.Re_showAfterCheckAcc();
-                warning = Constants.haveSpaceString;
-                Process.AlignCenter(100, "!", "!", warning);
-            } else if (userString.charAt(0) >= '0' && userString.charAt(0) <= '9') {
-                RegisterUI.Re_showAfterCheckAcc();
-                warning = Constants.numberindex0;
-                Process.AlignCenter(100, "!", "!", warning);
-            } else {
-                int m = 0;
-                // so sanh username nhap vao voi list xem co trung hay khong
-                for (User user : lst) {
-                    if (userString.equalsIgnoreCase(user.getUserAcc()) && x == 0) {
-                        RegisterUI.Re_showAfterCheckAcc();
-                        warning = Constants.username_exist;
-                        Process.AlignCenter(100, "!", "!", warning);
-                        m = 1;
-                    }
-                    if (userString.equalsIgnoreCase(user.getUserAcc()) && x == 1) {
-                        m = 0;
-                    }
-                }
-                if (m == 0) {
-                    checkuser = false;
-                }
-            }
+            checkuser = Authentication_Acc(userString, x);
         }
         return userString;
+    }
+
+    public boolean Authentication_Acc(String userString, int x) throws SQLException {
+        List<User> lst = new UserBL().getAllCustomers();
+        String warning = "♪♫♪~d(^.^)b~♪♫♪";
+        if (userString.length() > 32 || userString.length() < 3) {
+            RegisterUI.Re_showAfterCheckAcc();
+            warning = Constants.over32String;
+            Process.AlignCenter(100, "!", "!", warning);
+            return true;
+            // throw new SQLException("input failed");
+        } else if (userString.indexOf(" ") > 0) {
+            RegisterUI.Re_showAfterCheckAcc();
+            warning = Constants.haveSpaceString;
+            Process.AlignCenter(100, "!", "!", warning);
+            return true;
+            // throw new SQLException("input failed");
+        } else if (userString.charAt(0) >= '0' && userString.charAt(0) <= '9') {
+            RegisterUI.Re_showAfterCheckAcc();
+            warning = Constants.numberindex0;
+            Process.AlignCenter(100, "!", "!", warning);
+            return true;
+            // throw new SQLException("input failed");
+        } else {
+            // so sanh username nhap vao voi list xem co trung hay khong
+            for (User user : lst) {
+                if (userString.equalsIgnoreCase(user.getUserAcc()) && x == 0) {
+                    RegisterUI.Re_showAfterCheckAcc();
+                    warning = Constants.username_exist;
+                    Process.AlignCenter(100, "!", "!", warning);
+                    return true;
+                    // throw new SQLException("input failed");
+                }
+                if (userString.equalsIgnoreCase(user.getUserAcc()) && x == 1) {
+                    LoginUI.HeaderLoginUI();
+                    System.out.println(Constants.username+userString);
+                    return false;
+                    // throw new SQLException("input OK");
+                }
+            }
+
+        }
+        return false;
+        // throw new SQLException("input OK");
     }
 
     public boolean isValid(String email) {
@@ -190,13 +206,15 @@ public class Process {
     }
 
     public static void AlignLeft(int value, String deco, String deco2, String content) {
-        System.out.printf(deco + " %-" + (value-2) + "s " + deco2, content);
+        System.out.printf(deco + " %-" + (value - 2) + "s " + deco2, content);
     }
+
     public static void AlignLeft(int value, String deco, String deco2, int content) {
-        System.out.printf(deco + " %-" + (value-2) + "s " + deco2, content);
+        System.out.printf(deco + " %-" + (value - 2) + "s " + deco2, content);
     }
+
     public static void AlignLeft(int value, String deco, String deco2, Date content) {
-        System.out.printf(deco + " %-" + (value-2) + "s " + deco2, content);
+        System.out.printf(deco + " %-" + (value - 2) + "s " + deco2, content);
     }
 
     public static void AlignCenterInput(int value, String content) {

@@ -313,4 +313,4 @@ INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.8', 'Add:\n- Thêm c
 INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.4.9', 'Fix:\n- Sửa việc Danh sách phim yêu thích trả về kết quả trùng lặp');
 INSERT INTO csdl_movie.aboutme (ver,notepatch) VALUES ('0.5.0', 'Fix:\n- Sửa lại một số lỗi mới phát hiện ở phiên bản trước\n- Chỉnh lại UI phần tìm kiếm phim\n + Giờ đây khi bạn chọn ID phim sẽ hiện thông tin chi tiết và danh sách các tập phim thay vì chỉ hiện mỗi link phim');
 INSERT INTO `csdl_movie`.`aboutme` (`ver`, `notepatch`) VALUES ('0.5.1', 'Add:\n- Thêm phần hiển thị quốc gia sản xuất bộ phim trong phần hiển thị chi tiết phim\n- Thêm phần hiển thị thể loại phim trong phần hiển thị chi tiết phim\n- Thêm lựa chọn tìm kiếm phim theo thể loại\n- Bổ sung thêm chức năng kiểm tra phần nhập tài khoản và email theo đúng định dạng\nChange:\n- Làm lại toàn bộ UI\nFix:\n- Chỉnh sửa cách thức hoạt động của chức năng favourite (thêm và xóa danh sách)\n- Sửa lại một lỗi khi đổi email trong profile');
-
+INSERT INTO `csdl_movie`.`aboutme` (`ver`, `notepatch`) VALUES ('0.5.2', 'Fix:\n- Sửa lại một số lỗi\n- Thêm một số Test use case');
