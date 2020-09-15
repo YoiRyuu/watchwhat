@@ -1,38 +1,35 @@
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\HeaderUI.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\DAL\FavouriteDAL.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\AboutmeUI.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\FavouriteUI.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\BL\TagsBL.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\ManageMemberUI.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Persistance\Tags.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\App.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Persistance\Favourite.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\Paragraph.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Persistance\Sources.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\DAL\RequestDAL.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\MovieUI.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\DAL\MovieDAL.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\DAL\NationDAL.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Persistance\Nation.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\DAL\DbUtil.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\BL\SourcesBL.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\DAL\TagsDAL.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\BL\NationBL.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\BL\RequestBL.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Persistance\User.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Persistance\Movie.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\BL\MovieBL.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\ProfileUI.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\RequestUI.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Utils\Constants.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\RegisterUI.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\DAL\SourcesDAL.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Utils\Constants2.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Persistance\Aboutme.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\LoginUI.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\BL\FavouriteBL.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Utils\Process.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\BL\UserBL.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\Persistance\Request.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\UI\MainUI.java
-C:\Users\cloud\Desktop\Project_1\Code\watchwhat\watchwhat\src\main\java\vtc\DAL\UserDAL.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\ConsoleUserInterface\MainCUI.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\BusinesLogicLayers\NationsBLL.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\DataAccessLayers\UserDAL.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\DataAccessLayers\TagsDAL.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\ConsoleUserInterface\LoginCUI.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\ConsoleUserInterface\HeaderCUI.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\Nations.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\Tags.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\Utils\ConnectUtil.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\DataAccessLayers\FavouriteDAL.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\Sources.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\BusinesLogicLayers\ProcessInput.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\DataAccessLayers\SourcesDAL.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\BusinesLogicLayers\SourcesBLL.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\User.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\ConsoleUserInterface\RegisterCUI.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\ConsoleUserInterface\FavouriteCUI.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\Movie.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\App.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\Utils\Process.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\BusinesLogicLayers\TagsBLL.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\Aboutme.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\ConsoleUserInterface\ManageMoviesCUI.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\Utils\TempData.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\Utils\MaskingPassword\EraserThread.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\ConsoleUserInterface\AboutmeCUI.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\DataAccessLayers\NationsDAL.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\Utils\MaskingPassword\PasswordField.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\BusinesLogicLayers\FavouriteBLL.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\ConsoleUserInterface\ProfileCUI.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\BusinesLogicLayers\MovieBLL.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\BusinesLogicLayers\UserBLL.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\DataAccessLayers\MovieDAL.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\PresentationLayers\ConsoleUserInterface\MoviesCUI.java
+C:\Users\cloud\Desktop\Project_1_Remake\Source Code\watchwhat\src\main\java\group4\Utils\Constants.java

@@ -13,6 +13,7 @@ INSERT INTO `wwdb`.`aboutme` (`ver`, `notepatch`) VALUES ('0.5.0', 'Fix: \n- Fix
 INSERT INTO `wwdb`.`aboutme` (`ver`, `notepatch`) VALUES ('0.5.1', 'Add:\n- Added the country display of the movie in the movie details display\n- Add the movie genre display in the movie details display\n- Added movie search option by genre\n- Adding the function of checking the correct email and account entry format\nChange:\n- Redo the entire UI\nFix:\n- Edit how the favorite function works (add and remove a list)\n- Fixed a bug when changing email in profile');
 INSERT INTO `wwdb`.`aboutme` (`ver`, `notepatch`) VALUES ('0.5.2', 'Fix:\n- Fix some bugs\nAdd:\n- Add some Test use case');
 INSERT INTO `wwdb`.`aboutme` (`ver`, `notepatch`) VALUES ('0.6.0', 'Remake Project\nChange:\n- Removed member management functionality\n- Removed request & manage request functionality\n- Optimizing and improving all remaining functions');
+INSERT INTO `wwdb`.`aboutme` (`ver`, `notepatch`) VALUES ('0.6.1', 'Fix:\n- Fix some bugs');
 
 -- --------------------------------------------------------------------------------------------------------------
 
