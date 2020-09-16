@@ -14,6 +14,7 @@ public class ConnectUtil {
         connection = DriverManager.getConnection(url, user, password);
         return connection;
     }
+
     public static Connection getConnection(String url2, String user2, String password2) throws SQLException {
         connection = DriverManager.getConnection(url2, user2, password2);
         return connection;

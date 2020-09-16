@@ -14,7 +14,7 @@
             "type": "java",
             "name": "Debug (Launch)-App<watchwhat>",
             "request": "launch",
-            "mainClass": "vtc.App",
+            "mainClass": "group4.App",
             "projectName": "watchwhat"
         }
     ]

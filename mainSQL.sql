@@ -242,8 +242,6 @@ BEGIN
 END //
 delimiter ;
 
-
-
 delimiter //
 CREATE PROCEDURE add_favourite(IN input int, input2 int)
 BEGIN
